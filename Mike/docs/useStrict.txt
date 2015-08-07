@@ -1,0 +1,13 @@
+‘Use Strict’
+
+After doing some coding you may have seen the statement on the top: ‘use strict’.  Just like most of you I had no idea what that meant and moved forward with building my application.  However, ‘use strict’ has become an incredibly useful way to promote good, scalable javaScript.  This string essentially tells the javascript-engine interpreter to be more picking when going through your code.
+
+What ‘use strict’ does:
+	Produces a reference error when defining global variables (assigning variables without using var). This reference error also catches global assigned within functions.
+ If you try to write to a global object strict mode throws an assignment error.
+If you try to delete properties of an undeletable object you will get a type error in strict mode.
+When creating an object with duplicate keys, strict mode you get a syntax error.
+Functions cannot have duplicate parameter names and in strict mode it will fail.
+The use of octal numbers is not allowed in javascript (040) and will throw a syntax error in strict mode.
+In strict mode, delete cannot be used to delete variables or plain objects. You can only delete properties within objects, arrays, etc.
+Use Strict is important not only for good code writing but helps throw errors that would otherwise be silent.
