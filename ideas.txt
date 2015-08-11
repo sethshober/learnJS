@@ -1,0 +1,19 @@
+coercion and types
+dynamic language
+compiled
+conditionals
+loops
+string methods
+readability
+typeof
+IIFEs
+closure
+this
+prototypes
+ES6
+Transpiling
+history
+AJAX
+security
+cross site origin
+use strict

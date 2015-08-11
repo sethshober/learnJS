@@ -1,0 +1,124 @@
+Language Basics: Comments, Variables, and Operators
+
+JavaScript is a case sensitive language, so be careful. 
+	
+	‘HOUSE’ is not equal to ‘house’
+
+Comments - are great for explaining things in your code, can help remind you later what you were doing, and are extremely beneficial for others trying to figure out what’s going on. Comments will not be interpreted as plain text, and not evaluated.
+
+	Single line comments are denoted like so
+		// my single line comment
+	Double line comments are denoted like so
+		/* 
+		This is 
+		a multiple
+		line comment
+		*/
+
+		
+Variables - You use variables to store and retrieve values. The first time a variable appears is its declaration, where it is put into memory. Try to give your variables meaningful names to make it easy for other people to understand what your code does.
+
+Let’s look at a simple statement
+	
+	var n = 2 + 2;
+
+n is the variable and will be equal to 4. Variables are declared with the var keyword, and can be done a few different ways.
+
+// A single declaration.
+var num;  
+// Multiple declarations with a single var keyword, separated by commas
+var num, max, min;    
+// Variable declaration and initialization in one statement.
+var count = 0, amount = 100; 
+
+// line returns do not matter
+var house
+    , brick
+    , sticks;
+
+If we do not set a value to a variable initially it will be set to ‘undefined’.
+
+Camelcasing:
+
+This is the naming convention JS developers use when naming things like variables. Since you can’t have spacing in your names and it may make sense to have multiple words in a name, best practice is to use camel case, which means the first word is lower case and all words after begin with a capital letter. Here’s an example:
+
+	thisVariableIsInCamelCase = “I am a camel cased variable”;
+	applesAndOranges = “fruits”;
+
+
+Sometimes you may want a variable to remain unchanged and constant, for example with some sort of secret key or password. The convention for this is to use all capital letters and separate words with underscores. Here is an example:
+
+	var I_DO_NOT_CHANGE = “mySuperSecretPassword”;
+	
+The interesting thing with this is that the variable I_DO_NOT_CHANGE can actually be changed. This is just a convention, though with ES6 the ‘const’ keyword was added to create a read-only constant. Let’s take another look.
+
+	var I_DO_ACTUALLY_CHANGE = ‘mySuperSecretPassword’;
+	const I_DO_NOT_CHANGE = ‘holdSteady’;
+	I_DO_ACTUALLY_CHANGE = ‘newPassword’;
+	I_DO_NOT_CHANGE = ‘try to change me’;
+	I_DO_ACTUALLY_CHANGE // ‘newPassword’
+	I_DO_NOT_CHANGE // ‘holdSteady’
+	
+	Note const is part of the ES6 specification and there are some caveats when using ES6. 	
+	To minimize compatibility issues and quirks, we will be focusing on the current ES5 		specification until later.
+
+Reserved Words: In JavaScript, some identifiers are reserved words and cannot be used as variables or function names. They will cause errors, and they will cause problems for you. Don't use them. Seriously!
+
+http://www.w3schools.com/js/js_reserved.asp
+http://javascript.about.com/library/blreserved.htm
+
+
+We need to make a decision on our semi colon usage.
+So far we have been using semi colons to denote the end of an expression. These are optional, though we are going to recommend getting in the habit of using them if you are new to the language.
+
+
+
+
+
+
+
+
+Operators - how we perform actions on variables or values. These are super important and useful, as you will be using them quite often in many different ways.
+	
+	+  -  *  /  =  % keep it simple. ignore these for later  ++  — +=  -=  *=  /=  ==  ===
+
+	Assignment ( = )
+		
+		var number = 5;
+
+	Math ( addition [+], subtraction [-], multiplication [*], division [/] )
+
+		var sum = number + 5;
+
+	Compound Assignment ( +=, -=, *=, /= ) this is a shortcut for combining math.
+
+		number += 5 is the same as number = number + 5		
+
+	Increment/Decrement ( ++, - - )
+
+		number ++ is the same as number + 1
+
+	Equality ( loose equals [==], strict equals [===], loose not equals [!=], 
+	strict not equals [!==] )
+		
+		a == b
+		More on this will be covered later when we go over types and values.
+
+	Comparison ( <, >, <=, >= )
+
+		number < sum
+
+	Logical ( and [&&], or [||] )
+
+		example: 
+
+		do something if ‘a’ and ‘b’ are true or if ‘a’ or ‘b’ are true.
+
+
+
+
+Don’t Repeat Yourself (DRY)
+
+You may have noticed by now that there are multiple ways to do certain things and often there is no right or wrong. One of the main principles of programming is Don’t Repeat Yourself, shortened to DRY. We will go over more examples of this later, but the key thing is don’t replicate variable data or lines of code if able.
+
+I think that’s plenty to chew on for now. We’ll return with types and values.
