@@ -19,3 +19,9 @@ cross site origin
 use strict
 regex
 === vs ==
+
+
+
+tough finding the line between explaining too much and too little. part of this can be figured out by deciding our market and whether we want to start out super beginner or not. there is a difference between a beginner who knows what they are talking about and a beginner who literally knows nothing.
+
+

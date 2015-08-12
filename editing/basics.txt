@@ -1,3 +1,6 @@
+We should write a quick follow up to the intro and what we did yesterday before jumping in.
+
+
 Language Basics: Statements, Comments, Variables, and Operators
 
 The majority of code you write in JavaScript, or any other language for that matter, is in the form of statements, and while statements are uniform to programming, it is important to understand how they are written using JavaScript. So what is a statement? In a computer language, a group of words, numbers, and operators that performs a specific task is a statement.
