@@ -17,3 +17,4 @@ AJAX
 security
 cross site origin
 use strict
+regex
