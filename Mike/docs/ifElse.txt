@@ -29,6 +29,6 @@ c)    "if...else if....else" If statments can start to get complex with the intr
 			}
 
 
-If statements are incredibly important to the success of developers and if you want to run a block of code only under certain conditions if statements are a good choice.
+If statements are incredibly important to the success of developers and if you want to run a block of code only under certain conditions, if statements are a good choice.
 
 

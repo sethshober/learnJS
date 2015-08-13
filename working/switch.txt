@@ -1,0 +1,19 @@
+As with If statements, Switch statements have been around programming since the beginning. While not as common as If statements, switch statements have a number of advantages all while being just as easy to implement.
+
+Switch statements evaluate an expression and match the result to the cooresponding case.
+Breaks are used to prevent cases from running when their expression doesnt evaluate to true. Ex:
+
+						var expression = "hello";
+						switch (expression){
+							case "hello":
+								console.log("Hello, how are u?");
+							break
+							case "goodbye":
+								console.log("Goodbye, nice to meet you")
+							break 
+						}
+						In the console: "Hello, how are u?"
+
+As with anything in javascript, Switch statements are highly flexible allowing for mutli-case single output, multi-case multiple operations, etc. Write some code to see the endless possibilites.
+
+Performance has become a major talking point in the world of programming. While this may not be important for personal work, performance is incredibly important to corporations where the name of the game is speed. Latency has a direct effect and traffic and thus profits. The javascript compiler executes the switch statments at a faster speed. With If..else, the compiler has to read through every line of code 
