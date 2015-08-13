@@ -11,5 +11,8 @@ console.log("Let's learn the JavaScript!")
 Congratulations, you're now a developer, or at least on a great path to become one! We'll see you tomorrow for JS basics.
 
 
+http://blog.teamtreehouse.com/mastering-developer-tools-console
+
+
 Let’s do this thing!
  Cheers

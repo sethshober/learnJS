@@ -18,7 +18,12 @@ security
 cross site origin
 use strict
 regex
+Errors
 === vs ==
+string methods
+array methods
+Math object properties and methods
+dates ... ugh
 
 
 
