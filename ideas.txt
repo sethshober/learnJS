@@ -16,14 +16,20 @@ history
 AJAX
 security
 cross site origin
+Application Monitoring & New Relic
 use strict
 regex
 Errors
+hash maps
+recursive functions
+variadic functions
+fizz buzz
 === vs ==
 string methods
 array methods
 Math object properties and methods
 dates ... ugh
+fibonacci numbers - this would be a great exercise that uses loops, Math, continue and many basic programming concepts. PLUS, I already have an example of this I did for a coding challenge. Boom!
 
 
 

@@ -1,19 +1,84 @@
-As with If statements, Switch statements have been around programming since the beginning. While not as common as If statements, switch statements have a number of advantages all while being just as easy to implement.
+As with 'if' statements, 'switch' statements are a staple in programming. While not as common as 'if' statements, 'switch' statements have their place to shine, providing a number of advantages, all while being just as easy to implement.
 
-Switch statements evaluate an expression and match the result to the cooresponding case.
-Breaks are used to prevent cases from running when their expression doesnt evaluate to true. Ex:
+What is a switch statement? A switch statements evaluate an expression and match the result to the cooresponding case, and are used to perform different actions based on different conditions, much like the 'if'.
 
-						var expression = "hello";
-						switch (expression){
-							case "hello":
-								console.log("Hello, how are u?");
-							break
-							case "goodbye":
-								console.log("Goodbye, nice to meet you")
-							break 
-						}
-						In the console: "Hello, how are u?"
+Why use a switch statement? Generally you will default to using an 'if' statement, but sometimes there will be a fair amount of 'else' clauses and it can become cluttered and difficult to read. It also becomes slow to interpret. In comes the 'switch'. After about 4 or more 'else' clauses it will become faster to run your code with a switch statement, and arguably more readable. Let's take a look:
 
-As with anything in javascript, Switch statements are highly flexible allowing for mutli-case single output, multi-case multiple operations, etc. Write some code to see the endless possibilites.
+	//syntax
+	switch(expression) {
+	    case n:
+	        code block
+	        break;
+	    case n:
+	        code block
+	        break;
+	    default:
+	        default code block
+	}
 
-Performance has become a major talking point in the world of programming. While this may not be important for personal work, performance is incredibly important to corporations where the name of the game is speed. Latency has a direct effect and traffic and thus profits. The javascript compiler executes the switch statments at a faster speed. With If..else, the compiler has to read through every line of code 
+	// example
+	var greeting = "hello";
+	switch (greeting){
+		case "hello":
+			console.log("Hello, how are u?");
+			break;
+		case "goodbye":
+			console.log("Goodbye, nice to meet you");
+			break ;
+		default:
+			console.log("Nothing found.");
+	}
+	// output: "Hello, how are u?"
+
+So, what just happened? First we declared the greeting variable and assigned it the value of 'hello'. Then we ran the switch passing in our greeting variable for the expression. What the switch does is take the value passed to it and checks each case for a match. If it finds a match it will run the code for that case. The break statement is key in the switch. The break statement is used to break out of a loop, which in this case ensures only the case it hits is run, else it would keep running down the list of cases looking for another case to execute. It is best to put a default case at the end, to indicate what to do if nothing is matched.
+
+Let's take another example that is more useful. Let's have the computer tell us if it's the weekend or not.
+
+	// taken from W3 but think it a very useful and insightful example
+	var text;
+	switch (new Date().getDay()) { // more on dates in its own post. this returns a number 0-6 to represent the day of the week, starting with Sunday.
+	    case 6:
+	        console.log(text = "Today is Saturday");
+	        break; 
+	    case 0:
+	        console.log(text = "Today is Sunday");
+	        break; 
+	    default: 
+	        console.log(text = "Looking forward to the Weekend");
+	}
+
+	// output will depend on what day you run this
+
+Sometimes we want multiple cases to run the same code block. In these cases we can create a fall-through. Fall-throughs can be useful, but they can easily be overlooked. Another developer might see the break statement missing and add it back in, so it's probably best to leave a comment.
+
+// note the default case does not have to be at the end
+var text;
+switch (new Date().getDay()) {
+    case 1:
+    case 2:
+    case 3:
+    // removed breaks because we want case 1,2,3 to fall through to default
+    default: 
+        console.log(text = "Looking forward to the Weekend");
+        break; 
+    case 4:
+    case 5:
+       console.log(text = "Soon it is Weekend");
+        break; 
+    case 0:
+    case 6:
+       console.log(text = "It is Weekend");
+}
+
+	// output will depend on what day you run this
+
+
+This alludes to the fact that break statements can be hard to maintain as they grow. Switch statements are far from bullet proof and often why they are not as common. Far before you run into any issues with the interpreter hitting your bajillion cases, you will find that it is too difficult to maintain as a switch. I found this out first hand. There are alternatives and things we can do if we find we are at a point where we have too many cases, and it just no longer makes sense, but this is far beyond where we are at and will depend on your use case. We will jump back to that down the road.
+
+
+
+
+
+
+
+

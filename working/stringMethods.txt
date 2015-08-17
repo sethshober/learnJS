@@ -1,0 +1,89 @@
+String Methods
+
+Much of the following information can be found in further detail at:
+
+http://www.w3schools.com/js/js_string_methods.asp
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
+
+As we know at this point strings are commonplace in JS and represent a sequence characters. What we need to learn now, is what we can actually do with them and how we can manipulate them. When you create a string literal, ex. var str = "my string", under the hood it is actually doing new String('my string'). String is a global object constructor function, which is used to create strings, and when a string is created it inherits all the methods of String. I realize this is slightly too technical for some at this point, but at least getting acquainted with new terms will be helpful for when we dive in later.
+
+What we want to talk about today is some of those methods and properties, which are a necessity for your toolkit.
+
+There is a 'length' property that returns how many characters are in the string. An empty string will return a length of 0.
+
+	// syntax
+	str.length
+
+	// example
+	var str = 'monkeys';
+	str.length // 7
+
+
+Methods:
+
+charAt(): returns the specified character from a string. The index starts at 0, and if it is out of range it will return an empty string.
+
+// syntax
+str.charAt(index)
+
+// example
+var str = 'monkeys';
+str.charAt(5) // 'y'
+
+// advanced
+str.charAt(str.length - 1) // this will return the last character, 's'
+
+
+concat(): this function combines the text from one or more strings and returns a new string. Changes to the text in one string do not affect the other string.
+
+// syntax
+str.concat(string2, string3[, ..., stringN]) // any number of strings can be passed in as arguments, which will be added to 'str'
+
+// example
+var str = "My name is ";
+str.concat("Joe", "Schmo"); // My name is Joe Schmo
+
+It is preferred to join strings via the '+' operator, as it is tremendously faster and much more readable. See the performance test: http://jsperf.com/concat-vs-plus-vs-join
+
+"My name is" + "Joe Schmo" // "My name is Joe Schmo"
+
+
+indexOf(): returns the index of (the position of) the first occurrence of a specified text in a string, starting the search at the beginning or from the optional fromIndex parameter. It will return -1 if the value is not found.
+
+Common use: see if a value exists within a string.
+
+// syntax
+str.indexOf(searchValue[, fromIndex])
+
+// example
+var str = 'monkeys';
+str.indexOf('mon') // 0
+str.indexOf('mon', 2) // -1
+
+// note that this is case sensitive
+str.indexOf('Mon') // -1
+
+// real world
+var monkey = 'howler monkey';
+str.indexOf('howler') !== -1 // true. we know we have a howler monkey
+
+// using indexOf to count occurences, from MSDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf
+var str = 'To be, or not to be, that is the question.';
+var count = 0;
+var pos = str.indexOf('e');
+
+while (pos !== -1) {
+  count++;
+  pos = str.indexOf('e', pos + 1);
+}
+
+console.log(count); // 4. pretty slick , right?!
+
+
+
+
+
+
+
+
+There are many more, some deprecated, and some part of ECMA6, that I encourage you to continue further research on your own.
