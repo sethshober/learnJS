@@ -1,0 +1,14 @@
+Math Object - 
+As we delve into javascript further it is important to understand MATH. MATH is a native javascript object that encompasses methods to perform on both integers and floats. 
+
+As you might assume, the math method performs mathematical tasks on numbers. These methods are useful in modifying numbers and providing dynamic data to your audience. Below i will provide a list of examples for useful methods associated with the math object. Keep in mind MATH is an incredibly vast topic and the object itself contains a plethora of methods encompassing a large area within the field. I will focus this lesson on ones that have real world properties.
+
+Math.random() - provides a random number between 0 and 1
+
+Math.round()
+Math.ceil()
+Math.floor() - Three rounding methods that are used to round floats to integers 
+
+Math.min()
+Math.max() - 
+
