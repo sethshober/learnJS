@@ -5,10 +5,23 @@ As you might assume, the math method performs mathematical tasks on numbers. The
 
 Math.random() - provides a random number between 0 and 1
 
-Math.round()
-Math.ceil()
+Math.round(),
+Math.ceil(),
 Math.floor() - Three rounding methods that are used to round floats to integers 
 
-Math.min()
-Math.max() - 
+Math.min(),
+Math.max() - provides the largest and smallest numbers respectively.
+
+Math.pow(x,y) - returns the value of x to the power of y. Math.pow(10,2) = 100.
+
+Along with these dynamic methods (require input from your program in the form of data), there are also a variety of constants that allow your program to act as a calculator:
+
+Math.PI - returns PI (3.14....)
+
+Math.SQRT_2,
+Math.SQRT1_2 - Returns the square roots of 2 and 1/2 respectively
+
+Math.LN10 - returns the natural log of 10.
+
+Feel free to delve into these methods. Math is a incredibly useful object in javascript and knowledge of these methods can make life easier when presenting numbers.
 
