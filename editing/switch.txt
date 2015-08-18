@@ -1,3 +1,6 @@
+// does it makes sense to add if...else to beginning or keep separate??
+
+
 As with 'if' statements, 'switch' statements are a staple in programming. While not as common as 'if' statements, 'switch' statements have their place to shine, providing a number of advantages, all while being just as easy to implement.
 
 What is a switch statement? A switch statements evaluate an expression and match the result to the cooresponding case, and are used to perform different actions based on different conditions, much like the 'if'.

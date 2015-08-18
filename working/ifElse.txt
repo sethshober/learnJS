@@ -1,3 +1,6 @@
+// this needs love and should most likely be a part of a post called if...else & the switch.
+
+
 For the first part in our 10 part series on Statements, we will go in depth into the If...Else statement. "If" statements have been apart of programming since the beginning. They provide a means of easily looping through pieces of data and adding logic to your code.
 
 If statements have flexibility in the code that you write:

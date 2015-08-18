@@ -1,3 +1,6 @@
+// This could maybe be incorporated into another post
+
+
 Truthy vs Falsey
 
 If you have read enough about javaScript you will have heard about Truthy and Falsey. Both of these values are important and used to evaluate expressions to both True and False.  
