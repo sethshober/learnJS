@@ -1,0 +1,11 @@
+Number Methods & Properties
+
+
+Properties: These are properties of the Number object, so you can access them straight on Number rather than on numbers created via the Number object.
+
+Number.MAX_VALUE: represents the maximum numeric value representable in JavaScript, which is 1.79E+308. Values larger than MAX_VALUE are represented as "Infinity".
+
+Number.MIN_VALUE: represents the smallest positive numeric value representable in JavaScript, which is 5e-324. Values smaller than MIN_VALUE ("underflow values") are converted to 0.
+
+Number.NaN: represents Not-A-Number. Equivalent of NaN. Interesting that NaN is actually a number.
+

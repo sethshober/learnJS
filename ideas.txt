@@ -1,11 +1,9 @@
 coercion and types
-dynamic language
 compiled
 conditionals
 loops
 string methods
 readability
-typeof
 IIFEs
 closure
 this
@@ -19,20 +17,21 @@ cross site origin
 Application Monitoring & New Relic
 use strict
 regex
+isomorphic JS
 Errors
 hash maps
 recursive functions
 variadic functions
 fizz buzz
+JSON
+the almighty event loop
+timers
 === vs ==
 string methods
 array methods
+number methods
 Math object properties and methods
 dates ... ugh
 fibonacci numbers - this would be a great exercise that uses loops, Math, continue and many basic programming concepts. PLUS, I already have an example of this I did for a coding challenge. Boom!
-
-
-
-tough finding the line between explaining too much and too little. part of this can be figured out by deciding our market and whether we want to start out super beginner or not. there is a difference between a beginner who knows what they are talking about and a beginner who literally knows nothing.
 
 

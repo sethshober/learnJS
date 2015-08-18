@@ -1,13 +1,38 @@
+update to reflect info from link below
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type
+
+
 Types - representations for values. 
 
-JavaScript is a dynamically typed language, meaning variables can hold any type of value at any time, vs statically typed, where the variable must be enforced with a type at creation, such as a string or number. Changes between types is known as coercion.
+JavaScript is a dynamically typed language, meaning the type will get determined automatically when the program is being processed and variables can hold any type of value at any time, vs statically typed, where the variable must be enforced with a type at creation, such as a string or number. Changes between types is known as coercion.
 
 	ex. var number = 10 // number is of the type number
 		number = ’10’ // number has been coerced and is now of the type string
 	// note that when using operands sometimes coercion happens automatically
+
+
+	var foo = 42;    // foo is now a Number
+	var foo = "bar"; // foo is now a String
+	var foo = true;  // foo is now a Boolean
+
 	
 
-Introduce 'typeof' so we can use it ahead.
+
+We will be using the 'typeof' operator to discuss the different types available in JS below.
+
+typeof: The typeof operator returns a string indicating the type of the unevaluated operand.
+
+// syntax
+typeof operand
+
+operand is an expression representing the object or primitive whose type is to be returned.
+
+
+
+
+Add examples to include typeof below
+
 
 
 
