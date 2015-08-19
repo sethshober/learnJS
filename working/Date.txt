@@ -1,0 +1,12 @@
+Date is an important object in Javascript. It provides a means of showing dynamic  values on webpages, expiring cookies, local storage, etc. and allows user input in the form of dates.
+
+Date objects are based on the time value in milliseconds since Januray 1, 1970 GMT. 
+
+Date provides a variety of methods we will go over that help transform the millisecond value javascript outputs to more readable formats. Finally we will introduce the moment.js library, used by the majority of front-end developers, to obtain even more presentable Dates on webpages.
+
+Date methods:
+
+Date.now();
+=>As of the millisecond of writing this, returns 
+
+ 
