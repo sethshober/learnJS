@@ -4,7 +4,31 @@ Date objects are based on the time value in milliseconds since Januray 1, 1970 G
 
 Date provides a variety of methods we will go over that help transform the millisecond value javascript outputs to more readable formats. Finally we will introduce the moment.js library, used by the majority of front-end developers, to obtain even more presentable Dates on webpages.
 
-Date methods:
+
+In order to display dates we have to create a date object to work with. There are four different ways in which we create our date object.
+
+1) var myDate = new Date();  => Assigns our variable to the current time in milliseconds.
+
+2) var myDate = new Date(milliseconds);
+
+3) var myDate = new Date(dateString);
+   Ex: var myDate = new Date("December 25, 2014 12:34:00");
+   Note: There are three types of dateStrings used to create our date object.
+         - ISO Dates: 
+         - Long Dates:
+         - Short Dates:
+
+4) var myDate = new Date(year, month, day, hours, minutes, seconds, milliseconds);
+   Ex: var myDate = new Date(2015, 12, 12, 34, 0, 0)
+   Note: only year, month, day is required
+
+
+
+Finally, now we have created our date object, we can use the inherited methods native to javascript to get and set our dates. Please note that date objects are static. While the computer is constantly in motion, date objects do not change once they are created.  
+
+
+
+
 
 Date.now();
 =>As of the millisecond of writing this, returns 1439944584530
@@ -18,11 +42,11 @@ Date.parse(dateString) - Given a "date" such as Aug 1, 2001, Date.parse will par
 Date.Parse('Aug 9, 2001');
 => 997336800000 
 
-Date Constructors are used when you create a Date object and have the ability to manipulate it. The above methods do not instanciate the Date method. This is because they did not introduce the "new" date object.
+Date Constructors are used when you create a Date object and have the ability to manipulate it. The above methods do not instantiate the Date object. This is because they did not introduce the "new" date object.
 
-var date = new Date(); =>used to instanciate the new date object
 
-This object inherits a variety of prototype methods that can now be acted on this object. We will introduce a number of these constructor methods below.
+
+
 
 
 
