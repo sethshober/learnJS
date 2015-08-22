@@ -1,4 +1,4 @@
-Date is an important object in Javascript. It provides a means of showing dynamic  values on webpages, expiring cookies, local storage, etc. and allows user input in the form of dates.
+Date is an important object in Javascript. It provides a means of showing dynamic time-values on webpages, expiring cookies, local storage, etc. and allows user input in the form of dates.
 
 Date objects are based on the time value in milliseconds since Januray 1, 1970 GMT. 
 
@@ -18,7 +18,13 @@ Date.parse(dateString) - Given a "date" such as Aug 1, 2001, Date.parse will par
 Date.Parse('Aug 9, 2001');
 => 997336800000 
 
-Date Constructors:
+Date Constructors are used when you create a Date object and have the ability to manipulate it. The above methods do not instanciate the Date method. This is because they did not introduce the "new" date object.
+
+var date = new Date(); =>used to instanciate the new date object
+
+This object inherits a variety of prototype methods that can now be acted on this object. We will introduce a number of these constructor methods below.
+
+
 
 
 
