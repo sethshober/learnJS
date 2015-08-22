@@ -40,8 +40,37 @@ getDay()
     Returns a number 0-6 (Sun-Sat)
 
 Common "Set" methods
+Remember you still have to create your date object before executing these methods
 
 setDate()
+Add 25 days to the current date:
+var myDate = new Date();
+     myDate.setDate(myDate.getDate()+25); =>returns milliseconds of the current date + 25 days.
+
+setFullYear()
+Sets the date object to a specific date
+var myDate = new Date();
+     myDate.setFullYear(2016, 0, 22); => sets the date to January 22, 2016.
+     Note: months represented by 0-11
+
+There are three date methods that do not require the construction of a date object to return data
+
+Date.parse(dateString)
+Accepts an input of a valid date string we introduced above and returns the date in milliseconds
+
+Date.now()
+Returns the date in milliseconds starting in 1970 GMT
+
+Date.UTC(year, month, day, minutes, seconds, milliseconds)
+console.log(Date.UTC(96,11));
+=> 849398400000
+Note: only Year and Month is a required field
+
+
+//Will do moment.js right here
+
+Please visit Mozilla Developers Network for further details on how you can construct and use your date object.
+
     
 
 
