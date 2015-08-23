@@ -1,11 +1,8 @@
-// does it makes sense to add if...else to beginning or keep separate??
+Yesterday we talked about 'if' and 'else'. Today we are going to discuss an alternative, the 'switch' statement. While not as common as 'if' statements, 'switch' statements have their place to shine, providing a number of advantages, all while being just as easy to implement.
 
+What is a switch statement? A switch statement evaluates an expression and matches the result to the cooresponding case, and are used to perform different actions based on different conditions, much like the 'if'.
 
-As with 'if' statements, 'switch' statements are a staple in programming. While not as common as 'if' statements, 'switch' statements have their place to shine, providing a number of advantages, all while being just as easy to implement.
-
-What is a switch statement? A switch statements evaluate an expression and match the result to the cooresponding case, and are used to perform different actions based on different conditions, much like the 'if'.
-
-Why use a switch statement? Generally you will default to using an 'if' statement, but sometimes there will be a fair amount of 'else' clauses and it can become cluttered and difficult to read. It also becomes slow to interpret. In comes the 'switch'. After about 4 or more 'else' clauses it will become faster to run your code with a switch statement, and arguably more readable. Let's take a look:
+Why use a switch statement? Generally you will default to using an 'if' statement, but sometimes there will be a lot of 'else' clauses, and it can become cluttered and difficult to read. It also becomes slow to interpret. In comes the 'switch'. After about 4 or more 'else' clauses it will become faster to run your code with a switch statement, and arguably more readable. Let's take a look:
 
 	//syntax
 	switch(expression) {
@@ -23,7 +20,7 @@ Why use a switch statement? Generally you will default to using an 'if' statemen
 	var greeting = "hello";
 	switch (greeting){
 		case "hello":
-			console.log("Hello, how are u?");
+			console.log("Hello, how are you?");
 			break;
 		case "goodbye":
 			console.log("Goodbye, nice to meet you");
@@ -31,7 +28,7 @@ Why use a switch statement? Generally you will default to using an 'if' statemen
 		default:
 			console.log("Nothing found.");
 	}
-	// output: "Hello, how are u?"
+	// output: "Hello, how are you?"
 
 So, what just happened? First we declared the greeting variable and assigned it the value of 'hello'. Then we ran the switch passing in our greeting variable for the expression. What the switch does is take the value passed to it and checks each case for a match. If it finds a match it will run the code for that case. The break statement is key in the switch. The break statement is used to break out of a loop, which in this case ensures only the case it hits is run, else it would keep running down the list of cases looking for another case to execute. It is best to put a default case at the end, to indicate what to do if nothing is matched.
 
@@ -39,7 +36,7 @@ Let's take another example that is more useful. Let's have the computer tell us 
 
 	// taken from W3 but think it a very useful and insightful example
 	var text;
-	switch (new Date().getDay()) { // more on dates in its own post. this returns a number 0-6 to represent the day of the week, starting with Sunday.
+	switch (new Date().getDay()) { // this returns a number 0-6 to represent the day of the week, starting with Sunday. More on dates later.
 	    case 6:
 	        console.log(text = "Today is Saturday");
 	        break; 
@@ -66,7 +63,7 @@ switch (new Date().getDay()) {
         break; 
     case 4:
     case 5:
-       console.log(text = "Soon it is Weekend");
+        console.log(text = "Soon it is Weekend");
         break; 
     case 0:
     case 6:
@@ -76,7 +73,7 @@ switch (new Date().getDay()) {
 	// output will depend on what day you run this
 
 
-This alludes to the fact that break statements can be hard to maintain as they grow. Switch statements are far from bullet proof and often why they are not as common. Far before you run into any issues with the interpreter hitting your bajillion cases, you will find that it is too difficult to maintain as a switch. I found this out first hand. There are alternatives and things we can do if we find we are at a point where we have too many cases, and it just no longer makes sense, but this is far beyond where we are at and will depend on your use case. We will jump back to that down the road.
+As the number for cases grows, the harder it becomes to maintain. Switch statements are far from bullet proof, leaving some things like the break statement to user error, and often why they are not as common. Far before you run into any issues with the interpreter hitting your bajillion cases, you will find that it is too difficult to maintain as a switch. I found this out first hand. There are alternatives and things we can do if we find we are at a point where we have too many cases, and it just no longer makes sense, but this is far beyond where we are at and will depend on your use case. We will jump back to those alternatives down the road. For now, feel confident using the switch statement.
 
 
 

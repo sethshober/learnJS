@@ -12,7 +12,7 @@ function fibonacciLong() {
 	  , fibArr = [];
 
 	//loop 50 fibonacci number iterations
-	for(var i = 0; i <50; i++){
+	for(var i = 0; i < 50; i ++){
 		//arbitrarily add first #
 		if(i === 0) {
 			valOne = 0;

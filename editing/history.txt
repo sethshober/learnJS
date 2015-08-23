@@ -1,11 +1,16 @@
-Now that we know the basics of JS and have messed around some, I think it’s important to understand the history and where it JS came from and evolved.
+Now that we know the basics of JS and have messed around some, I think it’s important to understand the history of JS, where it came from, and how it evolved.
+
+
+// does this belong here?
 
 What It Is
 
-JavaScript is a dynamic programming language more detail on what dynamic is most commonly found in web browsers and applications. It allows for running scripts client side, interact with the web page, and do things in an asynchronous nature. More recently it has found popularity on the server side with node.js and even in NoSQL databases, such as MongoDB. One can become a full stack engineering with just JS.
+JavaScript is a dynamic programming language most commonly found in web browsers and web applications. It allows for running scripts client side, interact with the web page, and do things in an asynchronous nature. More recently it has found popularity on the server side with node.js and even in NoSQL databases, such as MongoDB. One can become a full stack engineer with just JS.
 
-It is a prototype-based scripting language with dynamic typing and first-class functions. talk about what that actually means. This makes JS a very flexible language, allowing for object-oriented, imperative, and functional programming styles. It was traditionally implemented as an interpreted language, but nowadays it should be considered just-in-time-compiled.d
+It is a prototype-based scripting language with dynamic typing and first-class functions. **talk about what that actually means**. This makes JS a very flexible language, allowing for object-oriented, imperative, and functional programming styles. It was traditionally implemented as an interpreted language, but nowadays it should be considered just-in-time-compiled.
 
+
+// this needs work
 
 How It Came To Be
 
@@ -13,7 +18,7 @@ JavaScript, which has nothing to do with Java, was created in ten days in May of
 
 Soon after release JavaScript was taken to ECMA an international private (membership-based) non-profit standards organization for information and communication systems to create a specification. For our purposes JavaScript and ECMAScript will be the same thing, though really ECMAScript is the specification, whereas JavaScript is the implementation. 
 
-In 2005 the term ‘AJAX’ was termed by Jesse James Garrett (https://en.wikipedia.org/wiki/Jesse_James_Garrett ) and many technologies were born which created a resurgence in JS, as well as a shift from static sites, to the dynamic and robust user experiences we have today, such as geolocation and single page loads, Gmail being the first major implementation of this. Maybe mention jQuery here. In December 2009 ECMAScript 5 came to be.
+In 2005 the term ‘AJAX’ was termed by Jesse James Garrett (https://en.wikipedia.org/wiki/Jesse_James_Garrett ) and many technologies were born which created a resurgence in JS, as well as a shift from static sites, to the dynamic and robust user experiences we have today, such as geolocation and single page loads, Gmail being the first major implementation of this. **Maybe mention jQuery here**. In December 2009 ECMAScript 5 came to be.
 
 Currently we are still using ECMAScript 5 specifications, but the future agenda of the language is known as Harmony. As features are agreed upon and implemented they may become available to use, but won’t be officially released until the next version. ECMAScript 6 was released in June of 2015. With the renaissance of JS, the release of HTML5, and development efforts on the node platform we should expect to see releases much more frequently.
 

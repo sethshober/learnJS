@@ -1,4 +1,6 @@
+practice and how to be successful || review and going forward
 coercion and types
+ternary
 compiled
 conditionals
 loops
@@ -34,4 +36,5 @@ Math object properties and methods
 dates ... ugh
 fibonacci numbers - this would be a great exercise that uses loops, Math, continue and many basic programming concepts. PLUS, I already have an example of this I did for a coding challenge. Boom!
 
+maybe save aside or non-code stuff for bonus weekend posts??
 

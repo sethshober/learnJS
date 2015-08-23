@@ -1,37 +1,38 @@
-We should write a quick follow up to the intro and what we did yesterday before jumping in.
+Welcome back! Glad to have you. Yesterday we wrote our line of code usng console.log(), which is used to print things and is really useful in testing. You will be seeing and using this a lot. Today we will be jumping in JS language basics.
 
+Our schedule includes:
 
-Language Basics: Statements, Comments, Variables, and Operators
+- Comments
+- Statements
+- Variables
+- Operators
 
-The majority of code you write in JavaScript, or any other language for that matter, is in the form of statements, and while statements are uniform to programming, it is important to understand how they are written using JavaScript. So what is a statement? In a computer language, a group of words, numbers, and operators that performs a specific task is a statement.
+The majority of code you write in JavaScript, or any other language for that matter, is in the form of statements, and while statements are uniform to programming, it is important to understand how they are written using JavaScript. So what is a statement? In a computer language, a group of words, numbers, and operators that performs a specific task is a statement. Essentially statements are instructions to be executed.
 
-Essentially statements are instructions to be executed. Without these statements, we do not have the ability to create dynamic code that builds and solves problems. While many of you may know an "if" statement and how to use a "for" loop, there are 11 statements used in JavaScript, some of which might be less well known. While some of these statements may seem slightly obscure, it is important to understand them as there is a tool for every trade.
-
-statements (according to W3):
+Here are some Statements & Declarations. More can be found at: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements
 break - 	    Terminates a switch or a loop
-continue - 	    Jumps out of a loop and starts at the top
+continue - 	    Jumps out of the current iteration of a loop
 debugger - 	    Stops the execution of JavaScript, and calls (if available) the debugging function  
 do ... while - 	Executes a block of statements, and repeats the block, while a condition is true
+while -         Creates a loop that executes a specified statement as long as the test condition evaluates to true.
 for	-           Marks a block of statements to be executed, as long as a condition is true
+for ... in      Iterates over the enumerable properties of an object, in arbitrary order. For each distinct property, statements can be executed.
 function -   	Declares a function
 if ... else	-   Marks a block of statements to be executed, depending on a condition
 return	-       Exits a function
 switch	-       Marks a block of statements to be executed, depending on different cases
 try ... catch - Implements error handling to a block of statements
-var	Declares a variable  
+throw -         throws a user defined exception
+var	-           Declares a variable  
 
-Don't worry too much about all this for now. We will cover them all, in time. 
+There's a lot here for now. No need to fret. One step at a time. We will learn them over time.
 
 
-JavaScript is a case sensitive language, so be careful. 
-	
-	‘HOUSE’ is not equal to ‘house’
-
-Comments - are great for explaining things in your code, can help remind you later what you were doing, and are extremely beneficial for others trying to figure out what’s going on. Comments will not be interpreted as plain text, and not evaluated.
+Comments - are great for explaining things in your code, can help remind you later what you were doing, and are extremely beneficial for others trying to figure out what’s going on. Comments will be interpreted as plain text, and not evaluated.
 
 	Single line comments are denoted like so
 		// my single line comment
-	Double line comments are denoted like so
+	Multi line comments are denoted like so
 		/* 
 		This is 
 		a multiple
@@ -56,17 +57,23 @@ var count = 0, amount = 100;
 
 // line returns do not matter
 var house
-    , brick
-    , sticks;
+  , brick
+  , sticks;
 
-If we do not set a value to a variable initially it will be set to ‘undefined’.
+If we do not set a value to a variable initially it will be set to ‘undefined’. In JavaScript, variable names (including function names) must be valid identifiers. An identifier must start with a-z, A-Z, $, or _. It can then contain any of those characters plus the numerals 0-9.
 
 Camelcasing:
 
-This is the naming convention JS developers use when naming things like variables. Since you can’t have spacing in your names and it may make sense to have multiple words in a name, best practice is to use camel case, which means the first word is lower case and all words after begin with a capital letter. Here’s an example:
+This is the naming convention JS developers use when naming things like variables. Since you can’t have spacing or hypens in your names and it may make sense to have multiple words in a name, best practice is to use camel case, which means the first word is lower case and all words after begin with a capital letter. Here’s an example:
 
 	thisVariableIsInCamelCase = “I am a camel cased variable”;
 	applesAndOranges = “fruits”;
+
+
+Watch out for case. JavaScript is a case sensitive language, so be careful. 
+	
+	‘HOUSE’ is not equal to ‘house’
+
 
 
 Sometimes you may want a variable to remain unchanged and constant, for example with some sort of secret key or password. The convention for this is to use all capital letters and separate words with underscores. Here is an example:
@@ -82,28 +89,22 @@ The interesting thing with this is that the variable I_DO_NOT_CHANGE can actuall
 	I_DO_ACTUALLY_CHANGE // ‘newPassword’
 	I_DO_NOT_CHANGE // ‘holdSteady’
 	
-	Note const is part of the ES6 specification and there are some caveats when using ES6. 	
-	To minimize compatibility issues and quirks, we will be focusing on the current ES5 		specification until later.
+	Note const is part of the ES6 specification and there are some caveats when using ES6. To minimize compatibility issues and quirks, we will be focusing on the current ES5 specification until later.
 
-Reserved Words: In JavaScript, some identifiers are reserved words and cannot be used as variables or function names. They will cause errors, and they will cause problems for you. Don't use them. Seriously!
+Reserved Words: In JavaScript, some identifiers are reserved words and cannot be used as variables or function names. They will cause errors, and they will cause problems for you. Don't use them. Seriously! For a listing of up to date reserverd words, see link below.
 
 http://www.w3schools.com/js/js_reserved.asp
 http://javascript.about.com/library/blreserved.htm
 
 
-We need to make a decision on our semi colon usage.
-So far we have been using semi colons to denote the end of an expression. These are optional, though we are going to recommend getting in the habit of using them if you are new to the language.
-
-
-
-
+So far we have been using semicolons to denote the end of an expression. These are optional, though we are going to recommend getting in the habit of using them if you are new to the language.
 
 
 
 
 Operators - how we perform actions on variables or values. These are super important and useful, as you will be using them quite often in many different ways.
 	
-	+  -  *  /  =  % keep it simple. ignore these for later  ++  — +=  -=  *=  /=  ==  ===
+	+  -  *  /  =  %  ++  — +=  -=  *=  /=  ==  ===
 
 	Assignment ( = )
 		
@@ -142,8 +143,5 @@ Operators - how we perform actions on variables or values. These are super impor
 		9 % 5 = 4 // 5 goes into 9 one time with a remainder of 4
 
 
-Don’t Repeat Yourself (DRY)
 
-You may have noticed by now that there are multiple ways to do certain things and often there is no right or wrong. One of the main principles of programming is Don’t Repeat Yourself, shortened to DRY. We will go over more examples of this later, but the key thing is don’t replicate variable data or lines of code if able.
-
-I think that’s plenty to chew on for now. We’ll return with types and values.
+I think that’s plenty to chew on for now. Keep practicing with declaring and setting variables, while also doing some basic math operations on them. See you tomorrow for types and values.
