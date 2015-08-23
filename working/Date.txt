@@ -1,24 +1,90 @@
-Date is an important object in Javascript. It provides a means of showing dynamic  values on webpages, expiring cookies, local storage, etc. and allows user input in the form of dates.
+Date is an important object in Javascript. It provides a means of showing dynamic time-values on webpages, expiring cookies, local storage, etc. and allows user input in the form of dates.
 
 Date objects are based on the time value in milliseconds since Januray 1, 1970 GMT. 
 
 Date provides a variety of methods we will go over that help transform the millisecond value javascript outputs to more readable formats. Finally we will introduce the moment.js library, used by the majority of front-end developers, to obtain even more presentable Dates on webpages.
 
-Date methods:
 
-Date.now();
-=>As of the millisecond of writing this, returns 1439944584530
+In order to display dates we have to create a date object to work with. There are four different ways in which we create our date object.
 
-Date.UTC(year, month[, day[, hour[, minute[, second[, millisecond]]]]]);
-Date.UTC accepts year and month along with a variety of extra options. If you only include year, javascript will return NaN.
-Date.UTC(1923, 12, 10, 12);
-=>If I wanted to know the number of milliseconds before Jan 1, 1970 GMT on December 10, 1923 at 12PM the answer would be -1450872000000.
+1) var myDate = new Date();  => Assigns our variable to the current time in milliseconds.
 
-Date.parse(dateString) - Given a "date" such as Aug 1, 2001, Date.parse will parse this string into milliseconds. Any nonvalid date string returns NaN. Using both NonISO and ISO date strings (/ and - resplectively is invalid)
-Date.Parse('Aug 9, 2001');
-=> 997336800000 
+2) var myDate = new Date(milliseconds);
 
-Date Constructors:
+3) var myDate = new Date(dateString);
+   Ex: var myDate = new Date("December 25, 2014 12:34:00");
+   Note: There are three types of dateStrings used to create our date object.
+        - ISO Dates: "YYYY-MM-DDT00:00:00" "YYYY-MM-DD" "YYYY-MM or YYYY"
+        - Long Dates: "MMM DD YYYY" "DD MMM YYYY" "YYYY MMM DD"
+        - Short Dates: "YYYY/MM/DD" "MM-DD-YYYY" (/ or -)
+
+4) var myDate = new Date(year, month, day, hours, minutes, seconds, milliseconds);
+   Ex: var myDate = new Date(2015, 12, 12, 34, 0, 0)
+   Note: only year, month, day is required
+
+
+
+Finally, now we have created our date object, we can use the inherited methods native to javascript to get and set our dates. Please note that date objects are static. While the computer is constantly in motion, date objects do not change once they are created.  
+
+Common "Get" methods
+getTime()
+	var myDate = new Date();
+	console.log(new Date()); => Sat Aug 22 2015 16:28:48 GMT-0600 (MDT)
+	myDate.getTime(); => returns current time in milliseconds (1440282580112)
+
+getFullYear()
+    console.log(new Date().getFullYear()); => 2015
+
+getDay()
+    console.log(new Date().getDay()); => 6
+    Returns a number 0-6 (Sun-Sat)
+
+Common "Set" methods
+Remember you still have to create your date object before executing these methods
+
+setDate()
+Add 25 days to the current date:
+var myDate = new Date();
+     myDate.setDate(myDate.getDate()+25); =>returns milliseconds of the current date + 25 days.
+
+setFullYear()
+Sets the date object to a specific date
+var myDate = new Date();
+     myDate.setFullYear(2016, 0, 22); => sets the date to January 22, 2016.
+     Note: months represented by 0-11
+
+There are three date methods that do not require the construction of a date object to return data
+
+Date.parse(dateString)
+Accepts an input of a valid date string we introduced above and returns the date in milliseconds
+
+Date.now()
+Returns the date in milliseconds starting in 1970 GMT
+
+Date.UTC(year, month, day, minutes, seconds, milliseconds)
+console.log(Date.UTC(96,11));
+=> 849398400000
+Note: only Year and Month is a required field
+
+
+//Will do moment.js right here
+
+Please visit Mozilla Developers Network for further details on how you can construct and use your date object.
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
