@@ -144,4 +144,34 @@ Operators - how we perform actions on variables or values. These are super impor
 
 
 
+	Logical Operators: are used to determine the logic between variables or values, and typically used with booleans such as in a conditional.
+
+	Logical AND - && - evaluates to true if each expression is true
+
+		// examples
+		var x = 5;
+		var y = 10;
+
+		(x < y && y > x) // true
+		(x < y && y < x) // false because both expressions must be true
+
+	Logical OR - || - evaluates to true if at least one expression evaluates to true
+
+		// examples
+		var x = 5;
+		var y = 10;
+
+		(x < y || y > x) // true
+		(x < y || y < x) // true because the first expression evaluated to true, so the rest don't matter at this point
+
+	Logical NOT - ! - returns true if expression cannot be converted to true, meaning the expression is false.
+
+		// examples
+		var x = 5;
+		var y = 10;
+
+		(x != y) // true because x is not equal to y
+
+
+
 I think that’s plenty to chew on for now. Keep practicing with declaring and setting variables, while also doing some basic math operations on them. See you tomorrow for types and values.
