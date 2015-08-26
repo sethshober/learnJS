@@ -1,0 +1,30 @@
+In order to utilize javascript libraries and frameworks, you need to understand the different ways in which you call the library. While we all want to use the latest and greatest technologies such as Angular.js, React.js, jQuery, etc., we have to understand where to put these libraries in our code.
+
+Before we describe the ways in which you add these massive libraries to your project, we will dive into the idea of a CDN.
+
+A CDN is a content delivery network. CDN utilize server nodes to download website content (in this case external libraries). These various servers are located throughout the world and the content is downloaded for the user based on server location. A user in Washington will use a CDN's server in Oregon before they use the one in New York. Since the majority of a user's page load time is spent downloading content, CDN's help speed this process up through their geolocated servers.
+
+How to pull in jQuery, an incredibly common javaScript library that focuses on DOM manipulation and user experience.
+
+1. Download file locally into your directory and call it =>
+
+<script src="jquery-1.11.3.min.js"></script>
+
+2. Download jQuery from a CDN =>
+
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+
+Note: this HTML code will be placed at the very bottom of you <body> tag. This allows your webpage to laod visually before loading the javascript that will manipulate it. 
+
+To cover all your bounds, there will be times (very few), where your CDN server is down. For these occurences we can create a try...catch statement at the bottom of your HTML body to combat this issue. 
+
+<script>
+try {
+	document.write('<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>);
+}
+catch{
+	document.write('<script src="jquery-1.11.3.min.js"></script>);
+}
+</script>
+
+With this try..catch block, we are simply writing the HTML <script> tag containing our CDN to our HTML document, if our CDN fails to load we write our local copy.
