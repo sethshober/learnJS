@@ -90,7 +90,7 @@ Number(“abc”); // NaN
 Boolean 
 
 
-A boolean is very simply represents true or false. You will commonly see these used in an if statement context ( more on that later ).
+A boolean simply represents true or false. You will commonly see these used in an if statement context ( more on that later ).
 
 if (5 > 4) { // this evaluates to the boolean of true
  // do something
