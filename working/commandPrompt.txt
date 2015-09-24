@@ -1,3 +1,36 @@
 First off let me say that we will be testing our code using Chrome's V8 engine developer tools. Firefox also uses Google's V8 engine creating a developer console that is more or less then same.
 
-Today we will be learning about the console, a feature of front-end web development that may have 
+Today we will be learning about the console, a feature of front-end web development that may look daunting on the surface. The console gives users the ability to log information that helps debug performance and functionality issues, as well as enter commands that interact with the document. 
+
+Before I go any further we should open the console. This can be done a number of ways:
+From the Top Nav Bar: View => Developer => Javascipt Console
+Keyboard Shortcut Mac: command + option + i
+
+Take a look, drink it in. There is a vast array of tools within the developer console that allows us to debug anything from CSS and HTML issues to high-end performance problems.
+
+Today we will focus on the console feature of the developer tools. First off, the console is the furthest right button on the navigation bar. The console is used to log values for the purpose of debugging but can also be used to expiriment with javascript expressions. Simple enough? Lets get started.
+
+We will be using "console.log" to print data to the console. Once we get the hang of this we will try our hand at both alert and prompt to interact with our data. 
+
+Lets start by being cliche. From the console, lets type the following in and run our script: 
+>console.log("Hello World!");
+Now run it!
+Hello World!
+
+You guessed it. We entered the string Hello World into our console.log function and this string printed to our console.
+
+We can also use expressions within our console.log statement.
+>console.log(5+5);
+Now run it!
+10
+
+As you can see 5+5 is evaluated to 10 then printed to our console.
+
+Now lets try this with Alert. An alert is a text box that pops up on the screen with an "alert message" used to provide feedback to the user. In everyday internet browsing, when we fail to login correctly to a website we may see an error message pop up. Lets try to make our own.
+In the console, type the following:
+>alert("The username you entered was incorrect.");
+Now run it!
+
+As you can see we get a text box with the string we just inputted into the box. Pretty cool huh?
+
+
