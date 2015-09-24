@@ -1,0 +1,3 @@
+First off let me say that we will be testing our code using Chrome's V8 engine developer tools. Firefox also uses Google's V8 engine creating a developer console that is more or less then same.
+
+Today we will be learning about the console, a feature of front-end web development that may have 
