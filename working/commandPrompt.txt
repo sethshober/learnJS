@@ -33,4 +33,14 @@ Now run it!
 
 As you can see we get a text box with the string we just inputted into the box. Pretty cool huh?
 
+Now lets interact with our text box. To do this we will use Prompt, another Javascript method that, unlike alert,
+takes input in the text box which you can use in the response.
 
+Lets create a program that prompts the user to enter a day of the week and alerts the user with the day. This will incorporate both the prompt function and the alert function.
+
+>var dayOfWeek = prompt("What day is it?", "")
+ alert("Today is " + dayOfWeek);
+
+ As you may have guessed when you run this program the alert will incorporate your response to the Prompt. Promopt take in two parameters. In this case the empty string ("") is set to the variable dayOfWeek and stored for later use. We then alert the user with their response to the prompt.
+
+ I know this may have been information overload but take some time to mess around with the console and it will become second nature. 
