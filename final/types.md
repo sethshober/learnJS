@@ -102,7 +102,7 @@ if (5 > 4) { // this evaluates to the boolean of true
 
 ######Undefined
 
-Undefined A value is undefined if it has been declared but not been defined a value or has been explicitly set to the value ‘undefined’. Undefined is an actual type of itself.
+A value is undefined if it has been declared but not been defined a value or has been explicitly set to the value ‘undefined’. Undefined is an actual type of itself.
 
 ```
 var x;
@@ -124,7 +124,7 @@ Object — array, objects, functions are all subtypes in this category.
 
 Object includes the subtypes: array, object, and function.
 
-Objects Objects are much like variables in that they are like containers for data values. The difference with objects is that they can contain multiple values, and are written as `name: value` pairs, also commonly referred to as `key: value`. It is worth noting that an object in programming is often representative of something that could be an object in real life.
+Objects are much like variables in that they are like containers for data values. The difference with objects is that they can contain multiple values, and are written as `name: value` pairs, also commonly referred to as `key: value`. It is worth noting that an object in programming is often representative of something that could be an object in real life.
 
 ```
 // let’s create a person object
