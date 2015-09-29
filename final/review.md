@@ -1,9 +1,9 @@
-Today we wanted to take quickly reflect on just how far we've already come. Seeing your progress is really helpful to build up confidence and help align a path forward. Here's what we learned so far:
+Today we want to reflect on just how far we've already come. Seeing your progress is really helpful to building up confidence and help align a path forward. Here's what we learned so far:
 
 ##Basics
 
 - We use statements, which are made up of expressions, to perform a specific task.
-- We use variables to store and retrieve values. We give our variables meaningful names to make it easy for other people to understand what our code does. We follow camel casing.
+- We use variables to store and retrieve values. We give our variables meaningful names to make it easy for other people to understand what our code does. We follow camel casing conventions.
 - We use comments for explaining things in our code. They will help remind us later what we were doing, and are extremely beneficial for others trying to figure out what’s going on.
 - We use operators to perform actions on variables or values.
 
@@ -15,7 +15,7 @@ Today we wanted to take quickly reflect on just how far we've already come. Seei
 - We use Strings to represent text. String values are surrounded with quotes.
 - A Number is anything 0–9 and also the value `NaN`, which ironically stands for ‘Not a Number.’ Numbers do not have quotes around them.
 - A Boolean is used to represent `true` and `false`.
-- A value is undefined if it has been declared but not been defined a value or has been explicitly set to the value ‘undefined’.
+- A value is `undefined` if it has been declared but not been defined a value or has been explicitly set to the value `undefined`.
 - Null is an assignment value. It can be assigned to a variable as a representation of no value. The caveat: it is actually of the type ‘object’.
 - Object has subtypes of array, object, and function.
 - Objects are much like variables in that they are like containers for data values. The difference with objects is that they can contain multiple values, and are written as `name: value` pairs, also commonly referred to as `key: value`.
@@ -35,13 +35,13 @@ Today we wanted to take quickly reflect on just how far we've already come. Seei
 - Our tools are `for`, `for...in`, `while`, `do...while`.
 
 
-####Bringing it all together:
+####Bringing it all together
 
 We have both executed all our new skills with the FizzBuzz exercise, and learned a brief history of JavaScript. With this reflection we can see just how much we've learned in only a couple of weeks. We are building a very strong foundation in not just JS, but also programming in general. We hope you've enjoyed things thus far and plan to continue on with us. Great work everybody! If things aren't quite clicking, just keep practicing. You'll get it!
 
 Remember, programming is not just about writing code. It is more a way of thinking. A good programmer will spend time planning and designing on paper before writing any code. She will also be determined and persevere through trials and tribulation. If you ever find yourself struggling, take a walk and let the mind reset. The ideas will flow, and you'll come back with a whole new solution to the problem.
 
-Be sure to utilize other resources, and do some research of your own. [Team Treehouse](http://referrals.trhou.se/sethshober) is a phenomenal site for learning web development skills, and [Stack Overflow](http://stackoverflow.com/) is possibly the most popular forum on the internet for developers like yourself. Just be careful to take it with a grain of salt.
+Be sure to utilize other resources, and do some research of your own. [Team Treehouse](http://referrals.trhou.se/sethshober) is a phenomenal site for learning web development skills. The team there is great! [Stack Overflow](http://stackoverflow.com/) is possibly the most popular forum on the internet for developers like yourself. Almost any development question one googles will have a reply on there. Just be careful to take it with a grain of salt.
 
 Keep an eye out for *hoisting* and *scope* this week, and feel free to read ahead.
 
