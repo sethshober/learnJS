@@ -9,7 +9,7 @@ Our schedule includes:
 
 ###Statements
 
-The majority of code you write in JavaScript, or any other language for that matter, is in the form of statements and expressions. So what are they? In a computer language, a group of words, numbers, and operators that performs a specific task is a statement, which is made up of expressions, which is something that produces a value. Essentially statements are instructions to be executed, most of which are probably expressions. Here is a basic example of a statement:
+The majority of code you write in JavaScript, or any other language for that matter, is in the form of statements and expressions. So what are they? In a computer language, a group of words, numbers, and operators that performs a specific task is a statement. A statement is made up of expressions, which are evaluated to produce a value. Essentially statements are instructions to be executed, most of which are probably expressions. Here is a basic example of a statement:
 
 <?prettify?>
 ```
