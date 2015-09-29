@@ -31,4 +31,14 @@ function myLocalVariable(){
 Since we have defined this variable using the keyword "var" and placed outside the function all functions in this file have access to it.
 
 ###Local Functional Scope###
-Understanding Local functional scope is key to tackling the problem of Closures which we will introduce later. Local Functional scope is essentially the just scope only a 
+Understanding Local functional scope is key to tackling the problem of Closures which we will introduce later. Local Functional scope is essentially scope only a specific fuction can access. When you declare your variables within a function they are owned by that function and only that function and use,reference, and access them
+
+Lets take a look at an example:
+```
+function localFunctionalScope (){
+	var myLocalVariable = 'I am only available here';
+}
+```
+As you can see when introducing local variables within functions they can only be accessed by that specific function. 
+
+We will let you chew this in for a night before diving into Closures. Things may get hairy but there is always green on the other side. Take some time to let this sink in and we will get at you tomorrow.
