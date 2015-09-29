@@ -1,4 +1,4 @@
-Today we wanted to take a quick reflection on just how far we've already come. Seeing your progress is really helpful in building up confidence and helping to align a path forward. Here's what we learned so far:
+Today we wanted to take quickly reflect on just how far we've already come. Seeing your progress is really helpful to build up confidence and help align a path forward. Here's what we learned so far:
 
 ##Basics
 
@@ -25,7 +25,7 @@ Today we wanted to take a quick reflection on just how far we've already come. S
 
 ##Conditionals
 
-- Conditionals hep us to execute code only when a certain decision or condition exists.
+- Conditionals help us execute code only when a certain decision or condition exists.
 - We use `if`, `else`, `if...else`, and `switch` as our tools for this. Each evaluates a condition to `true` or `false` and acts accordingly.
 
 
@@ -37,7 +37,7 @@ Today we wanted to take a quick reflection on just how far we've already come. S
 
 ####Bringing it all together:
 
-We put to practice all our new skills with the FizzBuzz exercise, and learned a brief history of JavaScript. With this reflection we can see just how much we've learned in only a couple of weeks. We are building a very strong foundation in not just JS, but also programming in general. We hope you've enjoyed things thus far and plan to continue on with us. Great work everybody! If things aren't quite clicking, just keep practicing. You'll get it!
+We have both executed all our new skills with the FizzBuzz exercise, and learned a brief history of JavaScript. With this reflection we can see just how much we've learned in only a couple of weeks. We are building a very strong foundation in not just JS, but also programming in general. We hope you've enjoyed things thus far and plan to continue on with us. Great work everybody! If things aren't quite clicking, just keep practicing. You'll get it!
 
 Remember, programming is not just about writing code. It is more a way of thinking. A good programmer will spend time planning and designing on paper before writing any code. She will also be determined and persevere through trials and tribulation. If you ever find yourself struggling, take a walk and let the mind reset. The ideas will flow, and you'll come back with a whole new solution to the problem.
 
