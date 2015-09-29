@@ -9,8 +9,9 @@ Our schedule includes:
 
 ###Statements
 
-The majority of code you write in JavaScript, or any other language for that matter, is in the form of statements and expressions. So what are they? In a computer language, a group of words, numbers, and operators that performs a specific task is a statement, which is made up of expressions, is something that produces a value. Essentially statements are instructions to be executed, most of which are probably expressions. Here is a basic example of a statement:
+The majority of code you write in JavaScript, or any other language for that matter, is in the form of statements and expressions. So what are they? In a computer language, a group of words, numbers, and operators that performs a specific task is a statement, which is made up of expressions, which is something that produces a value. Essentially statements are instructions to be executed, most of which are probably expressions. Here is a basic example of a statement:
 
+<?prettify?>
 ```
 var num = 2 + 2;
 ```
@@ -25,12 +26,14 @@ For a listing of Statements & Declarations see the [Mozilla Developer Network](h
 
 You use variables to store and retrieve values. The first time a variable appears is its declaration, which is where it is put into memory. Try to give your variables meaningful names to make it easy for other people to understand what your code does. Let’s take a closer look at our statement from earlier:
 
+<?prettify?>
 ```
 var num = 2 + 2;
 ```
 
 `num` is the variable and will be equal to 4. Variables are declared with the `var` keyword and can be done a few different ways.
 
+<?prettify?>
 ```
 // A single declaration.
 var num; 
@@ -51,6 +54,7 @@ If we do not set a value to a variable initially it will be set to `undefined`. 
 
 **Camel casing** is the naming convention JS developers use when naming variables. Since you can’t have spacing or hypens in your names and it may make sense to have multiple words in a name, best practice is to use camel case, which means the first word is lower case and all words after begin with a capital letter. Here’s an example:
 
+<?prettify?>
 ```
 var thisVariableIsInCamelCase = “I am a camel cased variable”;
 var applesAndOranges = “fruits”;
@@ -58,18 +62,21 @@ var applesAndOranges = “fruits”;
 
 Watch out for case. JavaScript is a case sensitive language, so be careful.
 
+<?prettify?>
 ```
  ‘HOUSE’ is not equal to ‘house’
 ```
 
 Sometimes you may want a variable to remain unchanged and constant, for example with some sort of secret key or password. The convention for this is to use all capital letters and separate words with underscores. Here is an example:
 
+<?prettify?>
 ```
 var I_DO_NOT_CHANGE = “mySuperSecretPassword”; 
 ```
 
 The interesting thing with this is that the variable `I_DO_NOT_CHANGE` can actually be changed. This is just a convention, though with ES6 the `const` keyword was added to create a read-only constant. Let’s take another look:
 
+<?prettify?>
 ```
 var I_DO_ACTUALLY_CHANGE = ‘mySuperSecretPassword’;
 const I_DO_NOT_CHANGE = ‘holdSteady’;
@@ -91,6 +98,7 @@ A quick note on **semicolons**: So far we have been using semicolons to denote t
 
 Comments are great for explaining things in your code, can help remind you later what you were doing, and are extremely beneficial for others trying to figure out what’s going on. Comments will be interpreted as plain text, and not evaluated. Commenting your code is one of the best habits you can develop as a developer.
 
+<?prettify?>
 ```
 Single line comments are denoted like so
 // my single line comment
@@ -109,36 +117,42 @@ line comment
 
 Operators are how we perform actions on variables or values. These are super important and useful, as you will be using them quite often in many different ways. Here is a listing followed by some basic examples. We will become more familiar with them over time.
 
+<?prettify?>
 ```
 +  —  *  /  =  %  ++  —  +=  -=  *=  /=  ==  ===
 ```
 
 Assignment ( = )
 
+<?prettify?>
 ```
 var number = 5;
 ```
 
 Math (addition +, subtraction -, multiplication *, division / )
 
+<?prettify?>
 ```
 var sum = number + 5;
 ```
 
 Compound Assignment ( `+=`, `-=`, `*=`, `/=` ) this is a shortcut for combining math.
 
+<?prettify?>
 ```
 number += 5 is the same as number = number + 5
 ```
 
 Increment/Decrement ( `++`, `--`)
 
+<?prettify?>
 ```
 number ++ is the same as number + 1
 ```
 
 Equality ( loose equals `==`, strict equals `===`, loose not equals `!=`, strict not equals `!==` )
 
+<?prettify?>
 ```
 a == b
 ```
@@ -146,18 +160,21 @@ a == b
 More on this will be covered later when we go over types and values.
 Comparison ( `<`, `>`, `<=`, `>=` )
 
+<?prettify?>
 ```
 number < sum
 ```
 
 Logical ( and `&&`, or `||` )
 
+<?prettify?>
 ```
 do something if ‘a’ and ‘b’ are true or if ‘a’ or ‘b’ are true.
 ```
 
 Modulus ( `%` ) The modulus operator returns the division remainder.
 
+<?prettify?>
 ```
 9 % 5 = 4 // 5 goes into 9 one time with a remainder of 4
 ```
@@ -166,6 +183,7 @@ Modulus ( `%` ) The modulus operator returns the division remainder.
 
 Logical AND — `&&` — evaluates to true if each expression is true.
 
+<?prettify?>
 ```
 // examples
 var x = 5;
@@ -177,6 +195,7 @@ var y = 10;
 
 Logical OR — `||` — evaluates to true if at least one expression evaluates to true.
 
+<?prettify?>
 ```
 // examples
 var x = 5;
@@ -188,6 +207,7 @@ var y = 10;
 
 Logical NOT — `!` — returns true if expression cannot be converted to true, meaning the expression is false.
 
+<?prettify?>
 ```
 // examples
 var x = 5;
@@ -199,3 +219,5 @@ var y = 10;
 ---
 
 That’s plenty to chew on for now! Keep practicing with declaring and setting variables, while also doing some basic math operations on them. We’ll see you back here tomorrow as we continue progressing through the basics and discover types and values.
+
+But wait, there's more. Some of you may be wondering where we write our code, and how we run it. You're going to want a text editor for writing code. We recommend and use [Sublime](http://www.sublimetext.com/) and [Atom](https://atom.io/). As far as running your code, well that gets a lot more complicated. For now, feel content using the browser DevTools, but if you are looking for something more advanced at this point you might try running [node](https://nodejs.org/en/) in the terminal. [Codecademy](https://www.codecademy.com/ru/courses/learn-the-command-line/) has a good tutorial on the terminal. There is also a neat browser terminal simulation project at [learntheterminal.com](http://learntheterminal.com/).

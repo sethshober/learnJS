@@ -6,6 +6,7 @@ To begin we will need a place to type and run our code. The easiest way to do th
 
 Type the following and hit enter:
 
+<?prettify?>
 ```
 console.log(“Let’s learn the JavaScript!”)
 ```

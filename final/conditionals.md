@@ -29,6 +29,7 @@ As you might think, both of these operators indicate a type of equals. A **doubl
 
 If we were to only use a single equals this would indicate that we want to set a value equal to something, which we most likely do not want in our conditional. We most likely just want to check if two values are equal. Let’s see a quick example:
 
+<?prettify?>
 ```
 var word = '5';
 var number = 5;
@@ -38,6 +39,7 @@ word === number // false
 
 Here we just saw how JavaScript automatically converted the types before comparing in the double equals. It is important to understand this behavior. Let’s further clarify what JS is doing under the hood:
 
+<?prettify?>
 ```
 var word = '5';
 var number = 5;
@@ -62,6 +64,7 @@ Cool, now we got those few caveats out of the way we can dive into writing some 
 
 Let’s take a look at the `if` statement:
 
+<?prettify?>
 ```
 // syntax
 if (condition) {
@@ -71,6 +74,7 @@ if (condition) {
 
 We use `if` to do something only if a condition is true. If I have at least $5 in my wallet I’m going to buy a coffee. Let’s make that into an `if` statement.
 
+<?prettify?>
 ```
 // if wallet contains at least $5, buy a coffee
  
@@ -85,6 +89,7 @@ if (wallet >= 5) { // true
 
 In the above example the conditional is whether or not wallet is greater than or equal to 5. The value of wallet is 10, so the conditional evaluated to true. Since this was true our code block got executed and the buyCoffee function got called, logging to the console “I’m going to by coffee.” Let’s make this a little bit smarter and give it some logic to do something if we don’t have $5. We can do this with the `else` statement, which is used to do something if the condition evaluates to false.
 
+<?prettify?>
 ```
 // syntax
 if (condition) {
@@ -112,6 +117,7 @@ Bummer, no coffee! Let’s see why not. Looking back over this we can see that t
 
 Now I want a muffin and a coffee. Let’s see how we can write our code to do logic for multiple situations. In comes the `else…if`.
 
+<?prettify?>
 ```
 // syntax
 if (condition1) {
@@ -144,8 +150,9 @@ if (wallet >= 20) { // true so this block runs
 }
 ```
 
-In the above example we used the `else…if` statement to create a condition to evaluate if the first one was false. In our example we had $100 dollars, which caused the first condition to evaluate to true and run the first block. Once a block runs it will not run other `else` or `else…if blocks. If we had $10 the first condition would have been false, and it would have gone to the second condition in the `else…if`, evaluated to true and called the buyCoffee function. Due to this nature we can have some user error in the order of conditionals, as described below.
+In the above example we used the `else…if` statement to create a condition to evaluate if the first one was false. In our example we had $100 dollars, which caused the first condition to evaluate to true and run the first block. Once a block runs it will not run other `else` or `else…if` blocks. If we had $10 the first condition would have been false, and it would have gone to the second condition in the `else…if`, evaluated to true and called the buyCoffee function. Due to this nature we can have some user error in the order of conditionals, as described below.
 
+<?prettify?>
 ```
 // I’ve switched the conditionals and left everything else the same.
 function buyCoffee() {
@@ -172,6 +179,7 @@ We can see the importance of ordering our conditional statements, and if not car
 
 Finally, conditionals may take advantage of logical operators, evaluating multiple expressions and returning as a boolean in the condition. Let’s see it in action.
 
+<?prettify?>
 ```
 // if I have at least $5 and I’m feeling hungry, buy a muffin
 // else buy a coffee

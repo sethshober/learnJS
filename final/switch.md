@@ -4,6 +4,7 @@ What is a switch statement? A switch statement evaluates an expression and match
 
 Why use a switch statement? Generally you will default to using an if statement, but sometimes there will be a lot of else clauses, and it can become cluttered and difficult to read. It also becomes slow to interpret. In comes the switch. After about 4 or more else clauses it may become faster to run your code with a switch statement, and arguably more readable. Let’s take a look:
 
+<?prettify?>
 ```
 //syntax
  switch(expression) {
@@ -35,6 +36,7 @@ So, what just happened? First we declared the greeting variable and assigned it 
 
 Let’s look at another example that is more useful. Let’s have the computer tell us if it’s the weekend or not.
 
+<?prettify?>
 ```
 // new Date().getDay() returns a value 0-6
 // the switch evaluates that expression
@@ -54,6 +56,7 @@ switch (new Date().getDay()) {
 
 Sometimes we want multiple cases to run the same code block. In these cases we can create a fall-through. Fall-throughs can be useful, but they can easily be overlooked. Another developer might see the break statement missing and add it back in, so it’s probably best to leave a comment.
 
+<?prettify?>
 ```
 /*
 note the default case does not have to be at the end.
