@@ -1,0 +1,1 @@
+Welcome back. Today we will focus on **Hoisting**. While Hoisting is imparative in understanding the tendancies of the javascript language, many developers simply skim it over and fail to grasp the builing blocks of the language. Were are here to help you understand what makes this beautiful language tick.
