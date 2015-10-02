@@ -1,69 +1,99 @@
-Welcome back. Today we will focus on **Hoisting**. While Hoisting is imparative in understanding the tendancies of the javascript language, many developers simply skim it over and fail to grasp the builing blocks of the language. Were are here to help you understand what makes this beautiful language tick.
+Welcome back. Today, we are going to learn about **hoisting**, which is fundamental to JavaScript, and trips up many developers who don't know the nuances of the language. Let's jump straight in. First, we need to explain the two concepts that are at the forefront of this very important JavaScript concept: **declarations** and **initialization**.
 
-Alright, lets dive into hoisting. Before we dive into hoisting in examples lets explain the two concepts at the forefront of this important javascript concept.
 
-**Declaration**
-A variable declaration is when you create your variable at the top of your javascript file and do not assign it a value. You are simply announcing that you are going to use it without tying a function, string, etc. to it. All variable declarations *do* get hoisted to the top of their current scope.
+**Declaration** is anytime you use the `var` or `function` keyword. All variable and function declarations get hoisted to the top of their scope.
+
+<?prettify?>
 ```
-var declare; //I have just declared a variable
-```
-
-
-
-
-**Initialization
-A variable initilization is when you not only announce a variable but tie a value to it as well. Initialized variables *do not* get hoised. Instead only the declaration is hoisted and the value assigned to it will be set to undefined. Essentially on the left side of your variables will get hoisted to the top of the current scope. Lets see:
-```
-var initialize = "I initialized my variable"
-//I have initializing my variable by assigning it to a string
-```
-
-Lets combine both concepts and look at the following function:
-```
-function hoist() {
-var first = 'my first variable initialized';
-var second = 'my second variable initialized';
+var myVariable; // variable declaration
+function myFunction () { // function declaration
+  // do stuff
 }
-hoist();
 ```
-Lets take a look behind the scenes. When this piece of code is run, all of the variable declarations are hoisted to the top of the local scope.
-Here is what this function looks like when it is run:
+**Initialization** is when you assign a value to a variable. The initialization of a variable *does not* get hoisted. Instead, only the declaration is hoisted, meaning the variable is set to `undefined` at the top of the scope, and the value assigned to it will still occur as originally written in the code. This is sort of the tricky part of hoisting. If we think of an assignment (ex. var a = 'a'), the left hand of the assignment is what gets hoisted. `var a` is hoisted to the top and declared, so now we are able to use it, but assigning `'a'` to the variable `a` still occurs when we wrote it. It will be much easier to look at this in context.
+
+<?prettify?>
+```
+var initialize = "I initialized my variable";
+
+// What actually happened:
+var initialize;
+initialize = "I initialized my variable";
+```
+
+What is actually happening here is the variable `initialize` is first declared, and then it is initialized (or assigned) with the value `"I initialized my variable."`. What about functions? Function declarations are actually hoisted first, followed by variables.
+
+<?prettify?>
 ```
 function hoist() {
-var first, second; //declarations
-var first = 'my first variable initialized'; //initialize
-var second = 'my second variable initialized'; //initialize
+  var first = 'my first variable initialized';
+  var second = 'my second variable initialized';
 }
 hoist();
 ```
 
-Slowly but surely we are starting to understand how javascript works under the hood.
-Now that we have gone over the basics lets look at an example that shows hoisting at its finest.
+Lets take a look behind the scenes of the above function declaration. When this piece of code is run, all of the variable declarations are hoisted to the top of their scope, which is within the function `hoist`. Here is what this function looks like when it is run:
+
+<?prettify?>
+```
+function hoist() {
+  // declarations
+  var first;
+  var second;
+  // initializations
+  first = 'my first variable initialized'; // initialize
+  second = 'my second variable initialized'; // initialize
+}
+hoist();
+```
+
+<?prettify?>
+Slowly but surely we are starting to understand how javascript works under the hood. Now that we have gone over the basics lets look at an example that shows hoisting at its finest.
+
+<?prettify?>
 ```
 var newVar = 'My New Variable';
 
 function newFunction(){
-alert(newVar);
-var newVar = 'local variable in local functional scope';
+  console.log(newVar);
+  var newVar = 'local variable in local functional scope';
 }
 newFunction();
-```
-The question is what is the value of the javascript alert when our function is called. We know from previous lessons that the alert should be associated with the value newVar which is a string and thus the string will be inserted into the popup text box. **Wrong**
 
-Since only declarations are hoisted to the top of their inherent scope and thus set to undefined we can rewrite our function to look like this:
 ```
-var newVar;
-var newVar = 'My New Variable';
+
+The question is what will JavaScript log when our function is called? From previous lessons we might be led to believe that the `newVar` from the function scope will be logged, but if we think what we just learned about hoisting we can walk through what happens when the code is run.
+
+<?prettify?>
+```
+// what is actually happening in the script above
 
 function newFunction(){
-var newVar;
-alert(newVar); //undefined
-var newVar = 'local variable in local functional scope';
+  var newVar;
+  console.log(newVar); // undefined, OH SNAP
+  newVar = 'private variable in functional scope';
 }
+
+var newVar;
+newVar = 'My New Variable';
+
 newFunction();
 ```
-The alert only has access to the variable declaration in this example and is thus set to undefined.
 
-As you can see hoisting is an important concept to understand and can really affect the code you write. Part of being a good developer is the understand of the tool you use, in this case javascript.
+This should be much more clear about what is happening, and *what should be happening*. `newFunction` won't actually log 'private variable in functional scope', as we might have originally thought. Instead, it logs undefined because the initialization hasn't occurred yet.
 
-We will be back at you next week with new concepts as we further our knowledge of this beautiful langauge.
+All this hoisting stuff can lead to some funky things that just don't make sense, as well as errors the are hard to figure out and unexpected behavior, especially to those coming from other languages.
+
+
+**********
+
+
+SOME EXAMPLES ON USING VARIABLES AND CALLING FUNCTIONS BEFORE THEY ARE VISUALLY DEFINED
+
+
+**********
+
+
+By now you might be wondering, and it's ok if you aren't, what we can do to avoid this confusion. It's best practice to write your code as closely as possible to how JavaScript will interpret it. This will help with readability, minimize errors, and help avoid confusion among those that may not be as familiar with the language. As you begin to understand these language oddities, you will be able to harness and use them to your advantage.
+
+We will be back at you next week with new concepts as we further our knowledge of this flexible, and dare we say, beautiful language.
