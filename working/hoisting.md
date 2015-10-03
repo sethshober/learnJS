@@ -10,7 +10,7 @@ function myFunction () { // function declaration
   // do stuff
 }
 ```
-**Initialization** is when you assign a value to a variable. The initialization of a variable *does not* get hoisted. Instead, only the declaration is hoisted, meaning the variable is set to `undefined` at the top of the scope, and the value assigned to it will still occur as originally written in the code. This is sort of the tricky part of hoisting. If we think of an assignment (ex. var a = 'a'), the left hand of the assignment is what gets hoisted. `var a` is hoisted to the top and declared, so now we are able to use it, but assigning `'a'` to the variable `a` still occurs when we wrote it. It will be much easier to look at this in context.
+**Initialization** is when you assign a value to a variable. The initialization of a variable *does not* get hoisted. Instead, only the declaration is hoisted, meaning the variable is set to `undefined` at the top of the scope, and the value assigned to it will still occur as originally written in the code. This is sort of the tricky part of hoisting. If we think of an assignment (ex. `var a = 'a'`), the left hand of the assignment is what gets hoisted. `var a` is hoisted to the top and declared, so now we are able to use it, but assigning `'a'` to the variable `a` still occurs when we wrote it. It will be much easier to look at this in context.
 
 <?prettify?>
 ```
@@ -53,7 +53,6 @@ Slowly but surely we are starting to understand how javascript works under the h
 <?prettify?>
 ```
 var newVar = 'My New Variable';
-
 function newFunction(){
   console.log(newVar);
   var newVar = 'local variable in local functional scope';
@@ -76,24 +75,42 @@ function newFunction(){
 
 var newVar;
 newVar = 'My New Variable';
-
 newFunction();
 ```
 
 This should be much more clear about what is happening, and *what should be happening*. `newFunction` won't actually log 'private variable in functional scope', as we might have originally thought. Instead, it logs undefined because the initialization hasn't occurred yet.
 
-All this hoisting stuff can lead to some funky things that just don't make sense, as well as errors the are hard to figure out and unexpected behavior, especially to those coming from other languages.
+All this hoisting stuff can lead to some funky things that just don't make sense, as well as errors the are hard to figure out and unexpected behavior, especially to those coming from other languages. Here is an example of bad code that works. Not all code in the wild is good code, so even though we are learning best practices, it is important to be able to identify and read things like this.
 
+<?prettify?>
+```
+number = 55;
+printSomething(number); /* 55, what magic is this?! */
+var number;
+function printSomething (x) {
+  console.log(x);
+}
+```
 
-**********
+To pretty much everybody outside of JavaScript, this script is counterintuitive. We assigned a variable and called a function, both before they were declared. At least that's how it appears on paper, but as we now know the declarations were hoisted, and that allowed this code to run properly. So please, do your best to declare your variables and functions at the top. Don't wait for them to be used to define them. Just to be clear on what happened above.
 
+<?prettify?>
 
-SOME EXAMPLES ON USING VARIABLES AND CALLING FUNCTIONS BEFORE THEY ARE VISUALLY DEFINED
+```
+function printSomething (x) {
+  console.log(x);
+}
+var number;
+number = 55;
+printSomething(number); // 55
+```
 
+Boy oh boy, does that make more sense!!
 
-**********
+---
 
+**Wrapping up the day**
 
-By now you might be wondering, and it's ok if you aren't, what we can do to avoid this confusion. It's best practice to write your code as closely as possible to how JavaScript will interpret it. This will help with readability, minimize errors, and help avoid confusion among those that may not be as familiar with the language. As you begin to understand these language oddities, you will be able to harness and use them to your advantage.
+JavaScript hoists declarations but not initializations. We write our code as closely as possible to how JavaScript will interpret it. This means declaring all variables and functions at the top of scope and initializing them if it makes sense. This will help with readability, minimize errors, and help avoid confusion among those that may not be as familiar with the language. As you begin to understand these language oddities, you will be able to harness and use them to your advantage.
 
 We will be back at you next week with new concepts as we further our knowledge of this flexible, and dare we say, beautiful language.
