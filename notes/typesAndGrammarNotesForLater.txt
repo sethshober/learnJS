@@ -1,0 +1,48 @@
+----------
+TYPES
+----------
+
+
+typeof null returns 'object'. bug that will never be fixed
+
+  // must do
+  var something = null
+  (!something && typeof something === 'object') //true
+
+
+
+----------
+VALUES
+----------
+
+Arrays
+
+delete key will just create undefined placeholder. arr.length does not change
+
+var arr = [1,2,3,4,5]
+arr.length // 5
+delete arr[2]
+arr // [1,2,,4,5]
+arr.length // 5
+
+
+Because arrays are just objects you can add string keys which do not count towards the length either. They get appended to end of array.
+
+var arr = []
+arr.['name'] = 'Seth'
+arr.length // 0
+
+If you use a number it will assume an index. Be careful!
+
+var arr = []
+arr['5'] = 'testing'
+arr // [ , , , , , 'testing']
+
+SAVE ARRAYS FOR NUMERICALLY INDEXED POSITIONS
+
+
+Strings
+
+
+
+
