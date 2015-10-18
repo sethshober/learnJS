@@ -298,28 +298,4 @@ console.log(matches_array);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 There are many more, some deprecated, and some part of ECMA6, that I encourage you to continue further research on your own.

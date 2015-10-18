@@ -22,20 +22,7 @@ We are going to focus on some of these, including the subtypes of object, object
 
 VARIABLES DON'T HAVE TYPES. VALUES DO.
 
-  This might seems like semantice. typeof is not asking the type of a varibale, but the typeof of the value inside the variable.
-
-undefined vs undeclared
-
-Safety check to avoid a ReferenceError for undeclared
-
-  // will error
-  if (DEBUG) console.log('Debugging started.')
-  // safe existence check
-  if (typeof DEBUG !== 'undefined') console.log('Debugging started.')
-  // feature check for API
-  if (typeof coolFeature === 'undefined') coolFeature = function() {/*...*/}
-  // or check global
-  if (!window.coolFeature) coolFeature = function() {/*...*/}
+  This might seems like semantics. typeof is not asking the type of a variable, but the typeof of the value inside the variable.
 
 
 ----------

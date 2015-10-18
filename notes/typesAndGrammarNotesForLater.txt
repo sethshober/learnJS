@@ -11,6 +11,22 @@ typeof null returns 'object'. bug that will never be fixed
 
 
 
+undefined vs undeclared
+
+Safety check to avoid a ReferenceError for undeclared
+
+  // will error
+  if (DEBUG) console.log('Debugging started.')
+  // safe existence check
+  if (typeof DEBUG !== 'undefined') console.log('Debugging started.')
+  // feature check for API
+  if (typeof coolFeature === 'undefined') coolFeature = function() {/*...*/}
+  // or check global
+  if (!window.coolFeature) coolFeature = function() {/*...*/}
+
+
+
+
 ----------
 VALUES
 ----------
