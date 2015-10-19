@@ -254,7 +254,7 @@ The replace() method returns a new string with some or all matches of a pattern 
 I'm leaving replace blank for now. I think replace and match should be talked about later because they are a bit more complicated and deal with regex, though replace does work with strings, we would be remiss to not go deeper into this one.
 
 
-
+The following deal with regular expressions. A regular expression (regex) is an sequence of characters that defines a search pattern. Regular expressions are used to perform pattern-matching and "search-and-replace" functions on text.
 
 
 
@@ -292,6 +292,9 @@ var matches_array = str.match(regexp);
 
 console.log(matches_array);
 // ['A', 'B', 'C', 'D', 'E', 'a', 'b', 'c', 'd', 'e']
+
+
+
 
 
 
