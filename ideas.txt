@@ -2,9 +2,6 @@ practice and how to be successful || review and going forward
 coercion and types
 ternary
 compiled
-conditionals
-loops
-string methods
 readability
 IIFEs
 closure
@@ -12,7 +9,6 @@ this
 prototypes
 ES6
 Transpiling
-history
 AJAX
 security
 cross site origin
@@ -24,13 +20,9 @@ Errors
 hash maps
 recursive functions
 variadic functions
-fizz buzz
 JSON
 the almighty event loop
 timers
-=== vs ==
-string methods
-array methods
 number methods
 Math object properties and methods
 dates ... ugh

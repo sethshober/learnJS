@@ -1,8 +1,8 @@
-Today's focus is going to be arrays. You may remember that arrays are actually just objects in JavaScript, so they are more or less a sub-type. An array is an object that holds values in numerically indexed positions, where the index starts at 0. The first value is index zero, if that helps to make sense. I remember this taking awhile for myself to sink in. Each value can be of any type including an array, meaning you can create an array of arrays, which is actually multi-dimensional, but that's sorta complicated. Any time you need a list of something, or you need to iterate over values, an array will be your friend.
+Today's focus is going to be arrays. You may remember that arrays are actually just objects in JavaScript, and are thus considered a sub-type. An array is an object that holds values in numerically indexed positions, where the index starts at 0. The first value is index zero, if that helps to make sense. I remember this taking awhile for myself to sink in. Each value can be of any type including an array, meaning you can create an array of arrays, which is actually multi-dimensional, but that's sorta complicated. Any time you need a list of something, or you need to iterate over values, an array will be your friend.
 
 Today's post will be much like our previous on strings, where our goal is to become more acquainted with arrays, while understanding when we might use them and common behaviors we can perform via methods. The examples are meant to be basic, allowing you to see what is happening, rather than getting caught up in logic. By understanding basic examples you will naturally think of more complicated ways to use them. Onward!
 
-We create arrays in their literal fashion, which really just means using brackets (`[]`).
+We create arrays in their literal fashion, which really just means using brackets `[]`.
 
 <?prettify?>
 ```
@@ -12,11 +12,11 @@ var myArray = []
 var myArray = ["hello", 5, true, [1,2,3,4,5]]
 ```
 
-Notice how we can store all types, including another array. Really, it's just a container for values if you think about it. Your values might be related, such as phone numbers, grocery items, email addresses, but they don't have to be. Because the items are indexed it makes it easy to iterate over each value and perform an operation. To access array values we use the index location.
+Notice how we can store all types, including another array. Really, it's just a container for values if you think about it. Your values might be related, such as phone numbers, grocery items, email addresses, but they don't have to be. Because the items are indexed it makes it easy to iterate over each value and perform an operation accordingly. To access array values we use the index location.
 
 <?prettify?>
 ```
-// access array values via index.
+// access array values via index
 var myArray = ['apples', 'oranges', 'strawberries']
 // remember index 0 is the first item
 myArray[0] // 'apples'
@@ -31,7 +31,7 @@ var myArray = ['apples', 'oranges', 'strawberries']
 myArray.length // 3
 ```
 
-###Methods
+##Methods
 
 The first thing we need to learn is how to add and remove items from our arrays. There are four simple methods we will start off with:
 
@@ -82,7 +82,7 @@ Hi Bret
 
 Though, quite a trivial example, the concept is what is important. Iterating over an array with a `for` loop is so critical to your foundations as a developer. Please, take time to let this sink in. I know we've seen this before, but let's go over it again.
 
-The first thing we did was declare and assign values to our array `names`. Then we wrote a `for` loop to log a greeting to each name in the array. This is very typical, we set `var i = 0`, as this will be used as a counter to access items in the array. We access array values like `names[0]`, which outputs `'Seth'` from the above example. We say do this loop as long as `i` is less than `names.length`, which will ensure the loop stops after we run out of items. Then, each time the loop runs, increment `i` (`i++`). Then we simply tell it what to do each time the loop runs, in our case, logging a greeting. We use string concatenation to do this. We grab the names from the array with `names[i]`, where `i` is our variable counter.
+The first thing we did was declare and assign values to our array `names`. Then we wrote a `for` loop to log a greeting to each name in the array. This is very typical, we set `var i = 0`, as this will be used as a counter to access items in the array. We access array values like `names[0]`, which outputs `'Seth'` from the above example. We say do this loop as long as `i` is less than `names.length`, which is 3, and will ensure the loop stops after we run out of items. Then, each time the loop runs, increment `i` via `i++`. Then we simply tell it what to do each time the loop runs, in our case, logging a greeting. We use string concatenation to do this. We grab the names from the array with `names[i]`, where `i` is our variable counter.
 
 Again, because this is so important to understand, let's break it down in code.
 
@@ -99,12 +99,14 @@ for (i = 0; i < names.length; i++) {
 // now the loop completes, we add one to i
 // and do all the checks again with i = 1
 // because 1 is less than the array length of 3
-// we run again with 
+// we run again with
+for (i = 1; i < 3; i++) { 
   console.log('Hi ' + names[i]) // 'Hi Mike'
   // because names[i] is names[1] is 'Mike'
+}
 ```
 
-The key here is understanding that we are accessing the array values with an index number, and we are representing that index number with a variable. Understanding that should clear up what is happening every time the loop runs. I remember how unclear it was seeing brackets and `i`s everywhere, but now it's like reading a book.
+The key here is understanding that we are accessing the array values with an index number, and we are representing that index number with a variable. Understanding that should clear up what is happening every time the loop runs. I remember how unclear it was seeing `[]`s and `i`s everywhere, but now it's like reading a book.
 
 
 To check whether an object is actually an array, we can't use `typeof`, because it will return `'object'`, since arrays are a sub-type of `'object'`. Instead we use the **[isArray()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray)** method.
@@ -117,6 +119,12 @@ Array.isArray(object)
 var countries = ['USA', 'Germany']
 typeof countries // 'object'
 Array.isArray(countries) // true
+// we might do something like
+if (Array.isArray(countries)){
+  for (var i = 0; i < countries.length; i++) {
+    // do something with countries[i]
+  }
+}
 ```
 
 We've already seen **[reverse()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse)** when going over [Strings](https://learnjswithme.com/javascript-strings/), which will reverse the order of the array items.
@@ -137,6 +145,7 @@ str = arr.join([separator])
 // separator will be put in between each item when joined together. default is a comma.
 var cars = ['Honda', 'Toyota', 'Maserati']
 var joinCars = cars.join() // 'Honda,Toyota,Maserati'
+// join on a space
 var joinCarsSpace = cars.join(' ') // 'Honda Toyota Maserati'
 ```
 
@@ -150,6 +159,7 @@ arr.indexOf(searchElement[, fromIndex])
 var arr = [1,2,3,4,5] // let's keep it simple
 arr.indexOf(2) // 1
 arr.indexOf(2, 3) // -1
+// 2 was not found because we started searching from the 3rd index, and had already past the value 2
 // common conditional 
 if (arr.indexOf(2) !== -1) {
   // it item is in array
@@ -188,7 +198,7 @@ food.slice(1, 3) // 'fries', 'milk shake'
 // omit second parameter to go to end
 food.slice(2) // [ 'milk shake', 'salad', 'bananas' ]
 // negative numbers work as well, but work as offset from end
-// extract 2nd index from end to end
+// extract 2nd index from end, to end
 food.slice(-2) // ['salad', 'bananas']
 // extract index 1 to 2nd offset from last item
 food.slice(1, -2) // ['fries', 'milk shake']
@@ -205,88 +215,55 @@ arr.sort([compareFunction])
 var numbers = [5, 10, 4, 8, 29, 7, 3, 50]
 // sort with no parameter causes bad results
 numbers.sort() // [ 10, 29, 3, 4, 5, 50, 7, 8 ]
-// a - b returns asending sort order
-var sortAsc = numbers.sort( function(a, b) { return a - b; } )
+// a - b returns ascending sort order
+var sortAsc = numbers.sort(function(a, b) {
+  return a - b
+})
 sortAsc // [ 3, 4, 5, 7, 8, 10, 29, 50 ]
 // b - a returns descending sort order
-var sortDesc = numbers.sort( function(a, b) { return b - a; } )
+var sortDesc = numbers.sort(function(a, b) {
+  return b - a
+})
 sortDesc // [ 50, 29, 10, 8, 7, 5, 4, 3 ]
 ```
 
-#EDITED UP TO HERE
-#PLACEHOLDER TEXT & CODE BELOW
+Most commonly used and recommended for iterating over arrays are `for` loops, as they are clean and fast, but there is an alternative that some prefer, the **[forEach()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)**. It executes a provided function once per array element. `forEach()` takes a `callback` function to get called on each item of the array. A callback function is just a function that gets passed to another function as a parameter, to get called later. The `callback` function for `forEach()` takes three parameters, which are placeholder values:
 
-**[forEach()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)**
-
-Alternative to a for loop for iterating of over an array. It executes a provided function once per array element.
+- `currentValue` - The current element being processed in the array.
+- `index` - The index of the current element being processed in the array.
+- `array` - The array that forEach is being applied to.
 
 <?prettify?>
 ```
 // syntax
 arr.forEach(callback[, thisArg])
-// example that needs changed
-function logArrayElements(element, index, array) {
-  console.log('a[' + index + '] = ' + element);
+// log items with forEach. we can leave off array parameter since we're not using it.
+function logArrayElements(element, i) {
+  console.log(i + ' - ' + element)
 }
+var arr = [1, 2, 'hi', [3, 4], 'Seth', true]
+arr.forEach(logArrayElements)
+/*
+0 - 1
+1 - 2
+2 - hi
+3 - 3,4
+4 - Seth
+5 - true
+*/
 
-// Note elision, there is no member at 2 so it isn't visited
-[2, 5, , 9].forEach(logArrayElements);
-// logs:
-// a[0] = 2
-// a[1] = 5
-// a[3] = 9
+// we can also attach an array directly
+[1, 2, 'hi', 'you'].forEach(logArrayElements)
+/*
+0 - 1
+1 - 2
+2 - hi
+3 - you
+*/
 ```
 
+I would recommend reading more on this one. It is quite common, and I imagine the callback thing is a bit complicated right now. We will cover more on functions later.
 
+---
 
-**[splice()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)**
-
-changes the content of an array by removing existing elements and/or adding new elements.
-
-<?prettify?>
-```
-// syntax
-array.splice(start, deleteCount[, item1[, item2[, ...]]])
-// examples that need changed
-var myFish = ['angel', 'clown', 'mandarin', 'surgeon'];
-
-// removes 0 elements from index 2, and inserts 'drum'
-var removed = myFish.splice(2, 0, 'drum');
-// myFish is ['angel', 'clown', 'drum', 'mandarin', 'surgeon']
-// removed is [], no elements removed
-
-// removes 1 element from index 3
-removed = myFish.splice(3, 1);
-// myFish is ['angel', 'clown', 'drum', 'surgeon']
-// removed is ['mandarin']
-
-// removes 1 element from index 2, and inserts 'trumpet'
-removed = myFish.splice(2, 1, 'trumpet');
-// myFish is ['angel', 'clown', 'trumpet', 'surgeon']
-// removed is ['drum']
-
-// removes 2 elements from index 0, and inserts 'parrot', 'anemone' and 'blue'
-removed = myFish.splice(0, 2, 'parrot', 'anemone', 'blue');
-// myFish is ['parrot', 'anemone', 'blue', 'trumpet', 'surgeon']
-// removed is ['angel', 'clown']
-
-// removes 2 elements from index 3
-removed = myFish.splice(3, myFish.length);
-// myFish is ['parrot', 'anemone', 'blue']
-// removed is ['trumpet', 'surgeon']
-```
-
-
-
-
-The **[map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)** method creates a new array with the results of calling a provided function on every element in this array.
-
-<?prettify?>
-```
-// syntax
-arr.map(callback[, thisArg])
-// example that needs changed
-var numbers = [1, 4, 9];
-var roots = numbers.map(Math.sqrt);
-// roots is now [1, 2, 3], numbers is still [1, 4, 9]
-```
+There are more array methods out there, some that will be important in the future, but a bit more complicated for where we are at. These above are common and will get you started on a great foundation. Keep getting comfortable reading [documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array), and try mimicking a method by writing your own. You'll develop a deeper understanding and realize it's all just JavaScript, and you can do it too. There is no deep magic here. See you next time! Cheers.
