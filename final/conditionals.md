@@ -13,15 +13,16 @@ Before we jump in we need to understand to understand a couple things.
 
 When a conditional runs it evaluates to true or false, so knowing what is false in JS will be quite helpful to writing our logic.
 
-Here are the five false values in javascript:
+Here are the false values in javascript:
 
+- **0** or **-0**
 - **““** — an empty string
 - **undefined** — a variable without a value associated with it
 - **null** — an empty value
 - **NaN** — not a number
 - **false** — of course!
 
-Everything else is true. Pretty simple right?!
+Everything else is `true`, even the string `"false"`. Pretty simple right?!
 
 #### `==` vs `===`
 
