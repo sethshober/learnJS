@@ -1,6 +1,4 @@
 practice and how to be successful || review and going forward
-coercion and types
-ternary
 compiled
 readability
 IIFEs

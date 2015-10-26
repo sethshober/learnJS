@@ -13,7 +13,25 @@ typeof null returns 'object'. bug that will never be fixed
 
 undefined vs undeclared
 
-Safety check to avoid a ReferenceError for undeclared
+There may be some confusion around undefined and undeclared. Variables that have no value are undefined. Variables that are declared, but not assigned a value, are given the value and type `undefined`. We can see calling `typeof` on such variables will return `'undefined'`.
+
+```
+var a
+typeof a // 'undefined'
+```
+
+Similarly to `undefined` we might see `undeclared`, most likely in the context of a `ReferenceError`. If something goes wrong in your program, it will display an error. This is a large subject unto itself, and so we will just peek at `ReferenceError`.
+
+```
+var a
+console.log(a) // undefined
+console.log(b) // ReferenceError: b is not defined
+```
+
+The language isn't the most clear here, but we can see in the above example that `a` logged `undefined` because we had declared it, but left no assignment. Then we attempted to log the variable `b`, and we got `ReferenceError: b is not defined`. This is telling us that the program attempted to do something with variable `b`, but it was not defined (undeclared), and it threw an error. The term throw is often used around errors, and basically just means log some details about what went wrong, so we can hopefully use it for debugging and fix the issue.
+
+
+Safety check to avoid a ReferenceError for undeclared.
 
   // will error
   if (DEBUG) console.log('Debugging started.')
@@ -58,6 +76,41 @@ SAVE ARRAYS FOR NUMERICALLY INDEXED POSITIONS
 
 
 Strings
+
+
+-----
+Special Values
+-----
+
+
+nonvalue values - undefined and null are both the type and value. they are to be treated as empty or 'non' values. Some developers prefer more specificity in distinguishing them:
+
+- `null` is an empty value
+- `undefined` is a missing value
+OR
+- `undefined` hasn't had a value yet
+- `null` had a value and doesn't anymore
+
+
+`null` is a special keyword, and not an identifier. this means you can't assign it a value like a variable. In `non-strict` mode you can treat `undefined` as an identifier and assign it a value. More on `strict` mode later. Both these ideas are extremely bad and dangerous.
+
+
+VOID - void will void out any value, so the result is always undefined. Note, this does not affect the original value.
+
+```
+var num = 999
+console.log(void a, a) // undefined 42
+```
+
+
+
+
+
+
+
+
+
+
 
 
 
