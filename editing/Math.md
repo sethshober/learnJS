@@ -3,31 +3,16 @@ As we delve into JavaScript further it is important to understand how to do math
 
 
 **Math.random()** 
-Math.random() provides a random number between 0 and 1
+Math.random() provides a random number between 0 and 1. 0 is inclusive. 1 is exclusive.
 In the following example we will create a function to utilize math's randomizer 
 
 <?prettify?>
 ```
 function getRandomNumber(){
-	return Math.random()*100;
+	return Math.random() * 100;
 }
 //returns a random number between 10-100. 
 ```
-
-**Math.round()**
-Math.round() is used to round numbers to the nearest whole number.
-
-<?prettify?>
-```
-const CA_TAX = 0.0925;
-function rounder(price){
-	var price = price*(1+CA_TAX);
-	return Math.round(price)
-}
-rounder(25.43);
-//returns 28 = number after taxes rounded to the nearest whole number
-```
-In this example we created a rounder function to round our product to the nearest whole number after we accounted for tax.
 
 **Math.ceil(number)** 
 Math.ceil() returns a number rounded **UP** to the closest integer.
@@ -48,6 +33,33 @@ Math.floor(.99); // 0
 Math.floor(112.12); // 112
 Math.floor(88.88); // 88
 ```
+
+Better example building on what we just learned.
+
+<?prettify?>
+```
+// Return a random number between 1 and 100:
+function getRandomNumber(topValue){
+  return Math.floor((Math.random() * topValue) + 1);
+}
+getRandomNumber(100)
+```
+
+**Math.round()**
+Math.round() is used to round numbers to the nearest whole number.
+
+<?prettify?>
+```
+const CA_TAX = 0.0925;
+function rounder(price){
+  var price = price * (1 + CA_TAX);
+  return Math.round(price);
+}
+rounder(25.43);
+//returns 28 = number after taxes rounded to the nearest whole number
+```
+In this example we created a rounder function to round our product to the nearest whole number after we accounted for tax.
+
 
 **Math.min(x1, x2, ..., xi)** 
 Math.min() returns the lowest number in a set of numbers. If no arguments are given the result is infinity, and if an input is not valid, the result is NaN.
@@ -73,19 +85,16 @@ function tallest (heightArray){
 // returns 201
 ```
 
-Along with these dynamic methods, there are also a variety of properties that are static and act as a reference point for mathematical calculations. Below are a few of them. 
-
-
-
-==== not statics?? ====
-
 **Math.pow(x,y)** 
-Math.pow() returns the value of x to the power of y. Pow is a static method in Math and thus cannot be used like the examples above as constructors. 
+Math.pow() returns the value of x to the power of y.
 
 <?prettify?>
 ```
 Math.pow(10,2) = 100.
 ```
+
+Along with these dynamic methods, there are also a variety of properties that are static and act as a reference point for mathematical calculations. Below are a few of them. 
+
 
 **Math.PI** 
 Math.PI returns the value of PI (3.14....).
