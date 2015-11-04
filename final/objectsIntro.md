@@ -1,11 +1,7 @@
 Well, we've made it to objects. Objects are such a core part to many programming languages, today we are just going to scratch the surface. We will introduce what objects are, how to create them, how to think about them, and some examples of when to use them. Today is just an introduction. It is not about object oriented programming or prototypical inheritance, just in case anybody was wondering. We will pick up on that stuff later.
 
 ###Intro
-<<<<<<< HEAD:working/objectsIntro.md
-The simplest way to think about an object in JavaScript, is to think of it like an object in real life. Objects in real life have properties, and often behaviors. Objects in JavaScript have properties and methods that define them. These are defined as `key:value` pairs. The properties help to define the object, and the methods are like the behaviors. A method is a function attached to an object, or more easily understood, an object property that is a function. Let's think of a bicycle as an object. It has properties like make, model, color, type, and weight. The methods might be pedal, ride, brake, and wheelie. Let's create that.
-=======
-An object is basically a data container. You can store all the different types in the same object to be accessed later. The simplest way to think about an object in JavaScript, is to think of it like an object in real life. Objects in real life have properties, and often behaviors. Objects in JavaScript have properties and methods that define it. These are defined as `key:value` pairs. The properties help to define the object, and the methods are like the behaviors. A method is a function attached to an object, or more easily understood, an object property that is a function. Let's think of a bicycle as an object. It has properties like make, model, color, type, and weight. The methods might be pedal, ride, brake, and wheelie. Let's create that.
->>>>>>> 46bbae0b810dba157a598c8e7fa1df1f0ba511ec:final/objectsIntro.md
+An object is basically a data container. You can store all the different types in the same object to be accessed later. The simplest way to think about an object in JavaScript, is to think of it as an object in real life. Objects in real life have properties, and often behaviors. Objects in JavaScript have properties and methods that define them. These are defined as `key:value` pairs. The properties help to define the object, and the methods are like the behaviors. A method is a function attached to an object, or more easily understood, an object property that is a function. Let's think of a bicycle as an object. It has properties like make, model, color, type, and weight. The methods might be pedal, ride, brake, and wheelie. Let's create that.
 
 <?prettify?>
 ```
@@ -30,11 +26,7 @@ var bike = {
 }
 ```
 
-<<<<<<< HEAD:working/objectsIntro.md
-This is known as an object literal. Here the official word on objects according to the MDN:
-=======
-This is known as on object literal. Here's the official word on objects according to the MDN:
->>>>>>> 46bbae0b810dba157a598c8e7fa1df1f0ba511ec:final/objectsIntro.md
+This is known as an object literal. Here's the official word on objects according to the MDN:
 
 > JavaScript is designed on a simple object-based paradigm. An object is a collection of properties, and a property is an association between a name (or key) and a value. A property's value can be a function, in which case the property is known as a method. In addition to objects that are predefined, you can define your own objects.
 
