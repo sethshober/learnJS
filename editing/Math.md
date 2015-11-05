@@ -1,6 +1,6 @@
-As we delve into JavaScript further it is important to understand how to do math. There is a native JavaScript object, `Math`, to help us do that. This includes properties and methods useful in modifying numbers and providing dynamic data to your audience. Below I will provide a list of examples for useful methods associated with the math object. Keep in mind MATH is an incredibly vast topic, and the object itself contains a plethora of methods encompassing a large area within the field. I will focus this lesson on the basics to get you started. If you find yourself still curious we always encourge further research. We are just your kickstarter.
+As we delve into JavaScript further it is important to understand how to peform mathematical operations. There is a native JavaScript object, `Math`, to help us do that. This includes `static` properties and `dynamic` methods useful in modifying numbers and providing data to your audience. Below I will provide a list of examples for useful properties and methods associated with the math object. Keep in mind MATH is an incredibly vast topic, and the object itself contains a plethora of mathematical operations encompassing a large area within the field. I will focus this lesson on the basics to get you started. If you find yourself still curious we always encourge further research. We are just your kickstarter.
 
-
+##Math Methods
 
 **Math.random()** 
 Math.random() provides a random number between 0 and 1. 0 is inclusive. 1 is exclusive.
@@ -9,9 +9,8 @@ In the following example we will create a function to utilize math's randomizer
 <?prettify?>
 ```
 function getRandomNumber(){
-	return Math.random() * 100;
-}
-//returns a random number between 10-100. 
+	return Math.random(); //0.17178424587473273
+} 
 ```
 
 **Math.ceil(number)** 
@@ -24,17 +23,22 @@ Math.ceil(55.12); // 6
 Math.ceil(66.86); // 67
 ```
 
-**Math.floor(number)** - 
+**Math.floor(number)** 
 Math.floor() is a Math method used to round a float **DOWN** to the nearest whole interger.
-
 <?prettify?>
 ```
 Math.floor(.99); // 0
 Math.floor(112.12); // 112
 Math.floor(88.88); // 88
 ```
+Lets incorporate Math.floor() and Math.random() to produce a random integer between 0 & 100
+<?prettify?>
+```
+Math.floor(Math.random()*100) + 1) // 38
+// Math.random() * 100 => produces a floating a point between 0 & 99. Lets say 76.178424587473273
+// 99.999999999999999 is the largest number we can obtain, thus the + 1 allows us the possibility to reach 100 rounding down
+```
 
-Better example building on what we just learned.
 
 <?prettify?>
 ```
@@ -95,6 +99,7 @@ Math.pow(10,2) = 100.
 
 Along with these dynamic methods, there are also a variety of properties that are static and act as a reference point for mathematical calculations. Below are a few of them. 
 
+##Math Properties
 
 **Math.PI** 
 Math.PI returns the value of PI (3.14....).
