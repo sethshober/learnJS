@@ -35,7 +35,7 @@ Let's incorporate Math.floor() and Math.random() to produce a random integer bet
 <?prettify?>
 ```
 Math.floor(Math.random()*100) + 1) // 38
-// Math.random() * 100 => produces a floating a point between 0 & 99. Lets say 76.178424587473273
+// Math.random() * 100 => produces a floating a point between 0 & 99. Let's say 76.178424587473273
 // 99.999999999999999 is the largest number we can obtain, thus the + 1 allows us the possibility to reach 100 rounding down
 ```
 
