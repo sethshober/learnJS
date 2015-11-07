@@ -47,7 +47,7 @@ getRandomNumber(1, 100);
 
 <?prettify?>
 ```
-Math.round(5.75) // 6
+Math.round(5.75); // 6
 // round a price of a product after accounting for sales tax
 const CA_TAX = 0.0925;
 function rounder(price){

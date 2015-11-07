@@ -1,30 +1,58 @@
-practice and how to be successful || review and going forward
-compiled
-readability
-IIFEs
+Upcoming:
+--------
+functions - best practices, IIFEs
+fibonacci exercise - to build on functions, how to approach / solve a problem, and improve optimize a solution
+review
+dates
+use strict
+timers
+Errors
+
+
+Ideas:
+------
 closure
 this
 prototypes
+JSON
 ES6
+intro to node and the command line - improving our work flow
 Transpiling
 AJAX
 security
 cross site origin
 Application Monitoring & New Relic
-use strict
 regex
 isomorphic JS
-Errors
 hash maps
 recursive functions
 variadic functions
-JSON
 the almighty event loop
-timers
-number methods
-Math object properties and methods
-dates ... ugh
-fibonacci numbers - this would be a great exercise that uses loops, Math, continue and many basic programming concepts. PLUS, I already have an example of this I did for a coding challenge. Boom!
 
-maybe save aside or non-code stuff for bonus weekend posts??
 
+non-code stuff
+--------------
+how to be successful
+readability
+reviews
+
+
+Live Content (reverse release order)
+------------
+Math
+Numbers
+Intro to Objects
+Null & Undefined
+Arrays
+Strings
+Hoisting
+Scope Intro
+Foundations Review
+Brief History
+FizzBuzz
+Loops
+Switch Statement
+Conditionals
+Types
+Basics
+Welcome to Learn JS With Me
