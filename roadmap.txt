@@ -15,6 +15,9 @@ closure
 this
 prototypes
 JSON
+IIFEs
+async
+Promises
 ES6
 intro to node and the command line - improving our work flow
 Transpiling
