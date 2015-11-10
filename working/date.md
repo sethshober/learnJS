@@ -1,8 +1,12 @@
-Lets now focus on the Date object in javascript. Date is an important object in Javascript. It provides a means of showing dynamic time-values on webpages, expiring cookies, local storage, etc. and allows user input in the form of dates.
+Lets now focus on the Date object in javascript. Date is an important object in Javascript both to the user and the programmer. It provides a means of showing dynamic time-values on webpages, expiring cookies, local storage, etc. and allows user input in the form of dates.
 
-Date objects are based on the time value in milliseconds since Januray 1, 1970 GMT. 
+Lets get the first quirk out of the way. Dates are by default represented by the number of `milliseconds` accrued since January 1st 1970 GMT. As I speak to you the date in milliseconds would be `1447126965782`.
 
-Date provides a variety of methods we will go over that help transform the millisecond value javascript outputs to more readable formats. Finally we will introduce the moment.js library, used by the majority of front-end developers, to obtain even more presentable Dates on webpages.
+Lets take a step back before jumping into our Date methods. Why in the world would the reference point for dates be January 1st GMT? This epoch time (00:00) is based off Unix time, where Unix programmers needed a widely agreed upon reference point for date in the near past due to computing capabilities at the time. For more on this go to (wikipedia.com/unix)[http://en.wikipedia.org/wiki/Unix_time#History]. 
+
+Furthermore, after going over our number object and more specifically Number.MAX_VALUE, we know that javascript's number type will reach infinity at some point and 1447126965782 is a rather large number....oh no! The dooms day is precisely Jan 19, 2038, the day in which our 32-bit interger representation of time reaches infinity...Y2.038K. While this certainly way past the horizon from the everchanging world of programming, no solidified solution as been presented. I have no idea what the future hold do u?
+
+Alright, after all this backdrop lets get into the nitty-gritty. Date provides a variety of methods we will go over that help transform the millisecond value javascript outputs to more readable formats. Once we get through the commonly used ones we will introduce the moment.js library, used by the majority of front-end developers, to obtain even more presentable Dates on webpages.
 
 
 In order to display dates we have to create a date object to work with. There are four different ways in which we create our date object. Note: This constructed object we create is necessary to perform javascript methods on our object.
