@@ -1,9 +1,5 @@
 Upcoming:
 --------
-functions - best practices, IIFEs
-fibonacci exercise - to build on functions, how to approach / solve a problem, and improve optimize a solution
-review
-dates
 use strict
 timers
 Errors
@@ -42,6 +38,10 @@ reviews
 
 Live Content (reverse release order)
 ------------
+Intro to ES6 - let and const
+Dates
+Fibonnaci
+Functions
 Math
 Numbers
 Intro to Objects
