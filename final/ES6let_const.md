@@ -47,7 +47,7 @@ That is quite confusing to most people used to working in other languages. JavaS
 
 In come `let` and `const`...
 
-**`let` declarations**
+###### let declarations
 
 `let` and `var` declarations are almost identical, the biggest difference being that `let` declarations are only hoisted to the top of a block, rather than the entire function. This means you should declare your `let` variables at the top of the block to avoid the *temporal dead zone*. More on that in a bit. Let's see how that affects our previous example.
 
@@ -90,7 +90,7 @@ if (number === 42) {
 console.log(number) // 42
 ```
 <br/>
-**`const` declarations**
+###### const declarations
 
 `const` is used to define constants, meaning they cannot be changed once set. This also means that they must be initialized immediately, or a syntax error will be thrown.
 
@@ -217,7 +217,7 @@ for (let j = 0; j < fns.length; j++) {
 The same behavior applies to `for ... in ` and `for ... of` loops. `const` can be a bit tricky, since its value cannot be changed. What this ultimately means is that you shouldn't use it in a `for` loop. It will error in a `for` loop, but it will work in a `for ... of` and `for ... in`, so long as you don't change the value in each iteration.
 
 
-**Global Block Bindings**
+###### Global Block Bindings
 
 One more important differentiation from `var` is that in `let` and `const` a new binding is created in the global scope, but the property is not added to the global object. This is different from how `var` works, where it assigns properties to the global object, often overwriting property values without intent.
 
@@ -249,6 +249,6 @@ console.log("str" in window) // false
 You still might have a use case to use `var` if you need to write something to the global object. This would be common in a browser where things need to be shared across frames and windows.
 
 
-**Best Practices**
+###### Best Practices
 
 You're probably left thinking, "Which should I use now, `var`, `let`, or `const`?" Use `const` by default and `let` when the value needs to change. Leave `var` for special cases.
