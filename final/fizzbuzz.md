@@ -28,7 +28,7 @@ for (var i = 1; i <= 100; i++) {
 }
 ```
 
-You can see here that I transferred my planning and thoughts to paper and got a our loop working. These are major achievements. Coding in steps helps us see our progress and makes the end goal seem more attainable. Next we need to add our logic. I’m going to use an `if…else` statement to handle the logic that checks for multiples of three and five, but before we can complete that we need to think of a way to find if something is divisible by something. With some googling, you might find and recall the modulo operator, which returns a remainder. If a division returns a remainder of zero, we know it’s divisible. Here is the [MDN on modulo (%)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder). Let’s update our code.
+You can see here that I transferred my planning and thoughts to paper and got our loop working. These are major achievements. Coding in steps helps us see our progress and makes the end goal seem more attainable. Next we need to add our logic. I’m going to use an `if…else` statement to handle the logic that checks for multiples of three and five, but before we can complete that we need to think of a way to find if something is divisible by something. With some googling, you might find and recall the modulo operator, which returns a remainder. If a division returns a remainder of zero, we know it’s divisible. Here is the [MDN on modulo (%)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder). Let’s update our code.
 
 <?prettify?>
 ```
@@ -154,7 +154,7 @@ Wow, that was some great coding everyone! When developing solutions you will fin
 
 ###FizzBuzz switch
 
-Some may prefer the switch statement to clean up some of the if checks. It may be a better option for maintainability of you intend to add more cases later, and it potentially could be faster.
+Some may prefer the switch statement to clean up some of the if checks. It may be a better option for maintainability if you intend to add more cases later, and it potentially could be faster.
 
 <?prettify?>
 ```
