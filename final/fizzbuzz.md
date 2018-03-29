@@ -154,7 +154,7 @@ Wow, that was some great coding everyone! When developing solutions you will fin
 
 ###FizzBuzz switch
 
-Some may prefer the switch statement to clean up some of the if checks. It may be a better option for maintainability of you intend to add more cases later, and it potentially could be faster.
+Some may prefer the switch statement to clean up some of the if checks. It may be a better option for maintainability if you intend to add more cases later, and it potentially could be faster.
 
 <?prettify?>
 ```
