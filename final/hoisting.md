@@ -80,7 +80,7 @@ newFunction();
 
 This should be much more clear about what is happening, and *what should be happening*. `newFunction` won't actually log 'private variable in functional scope', as we might have originally thought. Instead, it logs undefined because the initialization hasn't occurred yet.
 
-All this hoisting stuff can lead to some funky things that just don't make sense, as well as errors the are hard to figure out and unexpected behavior, especially to those coming from other languages. Here is an example of bad code that works. Not all code in the wild is good code, so even though we are learning best practices, it is important to be able to identify and read things like this.
+All this hoisting stuff can lead to some funky things that just don't make sense, as well as errors that are hard to figure out and unexpected behavior, especially to those coming from other languages. Here is an example of bad code that works. Not all code in the wild is good code, so even though we are learning best practices, it is important to be able to identify and read things like this.
 
 <?prettify?>
 ```
