@@ -177,7 +177,7 @@ var str = 'howler monkeys'
 str.lastIndexOf('e') // 11
 ```
 
-Sometimes there is a need to break a string down into smaller pieces such as words or characters. We can use **[split()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split)** to do this, which creates an array, making it easy for us to do different iterations on. It takes in parameters for what we want to split on and a limit for the length of our array.
+Sometimes there is a need to break a string down into smaller pieces such as words or characters. We can use **[split()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split)** to do this, which creates an array, making it easy for us to do different iterations on it. It takes in parameters for what we want to split on and a limit for the length of our array.
 
 <?prettify?>
 ```
