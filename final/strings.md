@@ -152,7 +152,7 @@ if ( str.indexOf('howler') !== -1 ) { // true
   // do something cool with it
 }
 
-// using indexOf to count occurences, from MSDN:
+// using indexOf to count occurrences, from MDN:
 var str = 'To be, or not to be, that is the question.'
 var count = 0
 var position = str.indexOf('e')
