@@ -35,7 +35,7 @@ Anything that is of the type 'string' has built-in methods available to it. Meth
 
 As we know strings are commonplace in JS and represent a sequence characters. What we need to learn now, is what we can actually do with them and how we can manipulate them. When you create a string literal, ex. `var str = "my string"`, under the hood it is actually doing `new String('my string')`. String is a global object constructor function, which is used to create strings, and when a string is created it inherits all the methods of String. I realize this is slightly too technical for some at this point, but getting acquainted with new terms is good to get used to, and eventually it all sinks in.
 
-What we want to talk about today is some of those methods and properties, which are a necessity for your toolkit. Here is the [MDN for String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) and [W3 Schools string methods](http://www.w3schools.com/js/js_string_methods.asp), where you can read further detail, including all the methods available.
+What we want to talk about today is some of those methods and properties, which are a necessity for your toolkit. Here is the [MDN for String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) and [W3 Schools string methods](http://www.w3schools.com/js/js_string_methods.asp), where you can read further details, including all the methods available.
 
 
 ###Properties
