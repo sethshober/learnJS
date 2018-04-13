@@ -12,7 +12,7 @@ Hi everybody, and welcome back. Our focus over the next week will be types and l
 
 Types are representations of values, and for our purposes, a type is a set of characteristics that identifies the behavior of a particular value, allowing it to be distinguished from other values, the engine, and the developer.
 
-There is larger discussion on this, but it is mostly irrelevant to us and not worth arguing. What is important is knowing that there is an intentional behavior made by both the engine and the developer based on the type.
+There is a larger discussion on this, but it is mostly irrelevant to us and not worth arguing. What is important is knowing that there is an intentional behavior made by both the engine and the developer based on the type.
 
 JavaScript provides a `typeof` operator that can examine a value and tell you what type it is, which returns a string indicating the type of the unevaluated operand. **Remember, variables don't have types, the values do.** `typeof` is not asking the type of a variable, but the `typeof` of the value inside the variable. This might seems like semantics, but it's important to grasp. 
 
@@ -29,13 +29,13 @@ var str = 'Hello, how are you?'
 typeof str // 'string'
 ```
 
-Anything that is of the type 'string' has built-in methods available to it. Methods are functions attached to objects, and string methods will allow us an easier way to do common tasks. In JS strings are immutable, which means they cannot be altered, and because of this the methods that alter strings must return a new value, rather than altering the original.
+Anything that is of the type 'string' has built-in methods available to it. Methods are functions attached to objects, and string methods will allow us an easier way to do common tasks. In JS, strings are immutable, which means they cannot be altered, and because of this the methods that alter strings must return a new value, rather than altering the original.
 
 ##String Methods and Properties
 
 As we know strings are commonplace in JS and represent a sequence characters. What we need to learn now, is what we can actually do with them and how we can manipulate them. When you create a string literal, ex. `var str = "my string"`, under the hood it is actually doing `new String('my string')`. String is a global object constructor function, which is used to create strings, and when a string is created it inherits all the methods of String. I realize this is slightly too technical for some at this point, but getting acquainted with new terms is good to get used to, and eventually it all sinks in.
 
-What we want to talk about today is some of those methods and properties, which are a necessity for your toolkit. Here is the [MDN for String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) and [W3 Schools string methods](http://www.w3schools.com/js/js_string_methods.asp), where you can read further detail, including all the methods available.
+What we want to talk about today is some of those methods and properties, which are a necessity for your toolkit. Here is the [MDN for String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) and [W3 Schools string methods](http://www.w3schools.com/js/js_string_methods.asp), where you can read further details, including all the methods available.
 
 
 ###Properties
@@ -152,7 +152,7 @@ if ( str.indexOf('howler') !== -1 ) { // true
   // do something cool with it
 }
 
-// using indexOf to count occurences, from MSDN:
+// using indexOf to count occurrences, from MDN:
 var str = 'To be, or not to be, that is the question.'
 var count = 0
 var position = str.indexOf('e')
@@ -177,7 +177,7 @@ var str = 'howler monkeys'
 str.lastIndexOf('e') // 11
 ```
 
-Sometimes there is a need to break a string down into smaller pieces such as words or characters. We can use **[split()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split)** to do this, which creates an array, making it easy for us to do different iterations on. It takes in parameters for what we want to split on and a limit for the length of our array.
+Sometimes there is a need to break a string down into smaller pieces such as words or characters. We can use **[split()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split)** to do this, which creates an array, making it easy for us to do different iterations on it. It takes in parameters for what we want to split on and a limit for the length of our array.
 
 <?prettify?>
 ```
