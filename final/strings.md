@@ -12,7 +12,7 @@ Hi everybody, and welcome back. Our focus over the next week will be types and l
 
 Types are representations of values, and for our purposes, a type is a set of characteristics that identifies the behavior of a particular value, allowing it to be distinguished from other values, the engine, and the developer.
 
-There is larger discussion on this, but it is mostly irrelevant to us and not worth arguing. What is important is knowing that there is an intentional behavior made by both the engine and the developer based on the type.
+There is a larger discussion on this, but it is mostly irrelevant to us and not worth arguing. What is important is knowing that there is an intentional behavior made by both the engine and the developer based on the type.
 
 JavaScript provides a `typeof` operator that can examine a value and tell you what type it is, which returns a string indicating the type of the unevaluated operand. **Remember, variables don't have types, the values do.** `typeof` is not asking the type of a variable, but the `typeof` of the value inside the variable. This might seems like semantics, but it's important to grasp. 
 
