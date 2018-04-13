@@ -29,7 +29,7 @@ var str = 'Hello, how are you?'
 typeof str // 'string'
 ```
 
-Anything that is of the type 'string' has built-in methods available to it. Methods are functions attached to objects, and string methods will allow us an easier way to do common tasks. In JS strings are immutable, which means they cannot be altered, and because of this the methods that alter strings must return a new value, rather than altering the original.
+Anything that is of the type 'string' has built-in methods available to it. Methods are functions attached to objects, and string methods will allow us an easier way to do common tasks. In JS, strings are immutable, which means they cannot be altered, and because of this the methods that alter strings must return a new value, rather than altering the original.
 
 ##String Methods and Properties
 
