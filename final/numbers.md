@@ -66,9 +66,9 @@ This is useful if you have a number with a lot of decimal places and you want to
 <?prettify?>
 ```
 var myNumber = 55.39821;
-myNumber.toFixed(2); // 55.40 ... and perfect for money
-myNumber.toFixed(4); // 55.3982
-myNumber.toFixed(6); // 55.398210
+myNumber.toFixed(2); // '55.40' ... and perfect for money
+myNumber.toFixed(4); // '55.3982'
+myNumber.toFixed(6); // '55.398210'
 ```
 
 ####[toPrecision()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toPrecision)
@@ -82,7 +82,7 @@ num.toPrecision(4); // '391.6'
 num.toPrecision(5); // '391.59'
 ```
 
-####[isInteger()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isInteger)
+####[Number.isInteger()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isInteger)
 It may be useful to check if your value is an integer. An integer for our purposes is a whole number (no decimals). Anything with a decimal is considered a floating point number. This can be confusing at times, because in JavaScript they are all the same type.
 
 <?prettify?>
