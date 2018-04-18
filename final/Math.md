@@ -26,7 +26,7 @@ Math.floor(112.12); // 112
 Math.floor(88.88); // 88
 ```
 
-Let's incorporate Math.floor() and Math.random() to produce a random integer between 0 & 100.
+Let's incorporate Math.floor() and Math.random() to produce a random integer between 1 & 100.
 
 <?prettify?>
 ```
