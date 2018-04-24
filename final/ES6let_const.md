@@ -1,4 +1,4 @@
-We're starting a series on **ECMAScript 6 2015 (ES6)**. You might be thinking, *"but it's 2017!"* True, some people have fully adopted the new standards long ago, but many haven't and many that have may not be using it to it's full potential. It's also one of the largest incremental changes to JavaScript, meaning there are a lot of new features to learn. Now that Node and browsers have provided near full support, it's time get on board and up your JS game.
+We're starting a series on **ECMAScript 6 2015 (ES6)**. You might be thinking, *"but it's 2017!"* True, some people have fully adopted the new standards long ago, but many haven't and many that have may not be using it to its full potential. It's also one of the largest incremental changes to JavaScript, meaning there are a lot of new features to learn. Now that Node and browsers have provided near full support, it's time get on board and up your JS game.
 
 ECMAScript is the standard for defining the behavior of JavaScript. It is important to note that JavaScript is an implementation of that standard, and browsers and platforms like [Node JS](https://nodejs.org/en/) provide their own superset of that. This means that not all implementations are feature aligned, so it is important to understand which features of ECMAScript are available in the implementation of JS you are using.
 
@@ -185,8 +185,10 @@ The code above does not perform as intended, as instead of outputting the value 
 var fns = []
 
 for (var i = 0; i < 10; i++) {
-  fns.push((function() {
-    console.log(i)
+  fns.push((function(i) {
+    return function() {
+      console.log(i)
+    }
   }(i)))
 }
 
