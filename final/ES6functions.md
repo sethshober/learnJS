@@ -110,7 +110,7 @@ let scores = [77,72,85,86,71,68]
 console.log(Math.min(...scores)) // 68
 ```
 
-This version conveys a lot clearer what is happening, so much so that I removed the variable for `min`.
+This version convey a lot clearer what is happening, so much that I removed the variable for `min`.
 
 The other neat thing about the spread operator is that you can use it with other parameters. For example, if you didn't want to accept scores above 99, you could do:
 
