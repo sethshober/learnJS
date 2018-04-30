@@ -51,7 +51,7 @@ peek() {
 }
 ```
 
-Lastly, we need the ability to dequeue data. Here, if the size is not zero, we make a copy of the data, delete it, update the front index, and the return then deleted data.
+Lastly, we need the ability to dequeue data. Here, if the size is not zero, we make a copy of the data, delete it, update the front index, and then return the deleted data.
 
 <?prettify?>
 ```
